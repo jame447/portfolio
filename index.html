@@ -3,11 +3,30 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Thiraphat Thongsing — Embedded Systems &amp; IoT Engineering Portfolio</title>
+  <title>Thiraphat Thongsing — Embedded Systems &amp; IoT Engineering Internship Portfolio</title>
   <meta
     name="description"
-    content="Embedded Systems &amp; IoT Engineering Portfolio of Thiraphat Thongsing (KMITL). #1 Integration &amp; #3 Day 2 Precision Sensing at TESA Top Gun Rally 2026, custom 2-layer EasyEDA PCBs, ESP32/Arduino C/C++, FPGA, and Edge-to-Cloud telemetry."
+    content="Embedded Systems &amp; IoT Internship Portfolio of Thiraphat Thongsing (KMITL). #1 Embedded Integration &amp; #3 Day 2 Sensing at TESA Top Gun Rally 2026, custom 2-layer EasyEDA PCBs, ESP32/Arduino C/C++, FPGA, ready to relocate (Bangkok / EEC / Hybrid)."
   />
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+  <link rel="canonical" href="https://jame447.github.io/portfolio/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://jame447.github.io/portfolio/" />
+  <meta property="og:title" content="Thiraphat Thongsing — Embedded Systems &amp; IoT Internship Portfolio" />
+  <meta
+    property="og:description"
+    content="KMITL Computer Engineering (Year 3, GPA >= 3.20) · #1 TESA Top Gun Rally 2026 Embedded Integration · ESP32/Arduino C/C++, EasyEDA 2-Layer PCB, MQTT/ESP-NOW · Ready to relocate (Bangkok / EEC / Hybrid)."
+  />
+  <meta property="og:image" content="https://jame447.github.io/portfolio/assets/og-card.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Thiraphat Thongsing — Embedded Systems &amp; IoT Internship Portfolio" />
+  <meta
+    name="twitter:description"
+    content="#1 TESA Top Gun Rally 2026 Embedded Integration · ESP32/Arduino Firmware · Custom 2-Layer PCB · Open for Embedded &amp; IoT Internship (Bangkok / EEC / Hybrid)."
+  />
+  <meta name="twitter:image" content="https://jame447.github.io/portfolio/assets/og-card.jpg" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
@@ -29,17 +48,22 @@
       </a>
 
       <ul class="nav-links" id="navLinks">
-        <li><a href="#scorebook">Scorebook</a></li>
-        <li><a href="#certificates">Certificate</a></li>
-        <li><a href="#projects">Systems</a></li>
-        <li><a href="#moisture-lab">Firmware Sim</a></li>
-        <li><a href="#skills">Stack</a></li>
-        <li><a href="#labs">Labs</a></li>
-        <li><a href="#contact">Contact</a></li>
+        <li><a href="#internship" data-i18n="nav.internship">Internship</a></li>
+        <li><a href="#scorebook" data-i18n="nav.scorebook">Scorebook</a></li>
+        <li><a href="#certificates" data-i18n="nav.certificate">Certificate</a></li>
+        <li><a href="#projects" data-i18n="nav.projects">Systems</a></li>
+        <li><a href="#moisture-lab" data-i18n="nav.sim">Firmware Sim</a></li>
+        <li><a href="#skills" data-i18n="nav.stack">Stack</a></li>
+        <li><a href="#labs" data-i18n="nav.labs">Labs</a></li>
+        <li><a href="#contact" data-i18n="nav.contact">Contact</a></li>
       </ul>
 
       <div class="nav-actions">
-        <a class="btn btn-secondary btn-sm" href="assets/Resume-Thiraphat-Thongsing.pdf" target="_blank" rel="noopener">
+        <div class="lang-switch" role="group" aria-label="Language switcher">
+          <button class="lang-btn active" type="button" data-lang="en">EN</button>
+          <button class="lang-btn" type="button" data-lang="th">ไทย</button>
+        </div>
+        <a class="btn btn-secondary btn-sm" href="assets/Resume-Thiraphat-Thongsing.pdf" target="_blank" rel="noopener" data-i18n="nav.resume">
           Resume PDF
         </a>
         <button class="mobile-menu-btn" id="mobileMenuBtn" type="button" aria-label="Toggle Menu">
@@ -56,21 +80,21 @@
         <div class="hero-grid">
           <div>
             <div class="hero-badges">
-              <span class="badge badge-emerald">
+              <span class="badge badge-emerald" data-i18n="hero.badgeAvail">
                 <span class="pulse-dot"></span>
-                Available for Embedded &amp; IoT Internship
+                Open for Embedded &amp; IoT Internship (Ready to Relocate)
               </span>
               <span class="badge badge-cyan">TESA Top Gun Rally 2026 · #1 Integration</span>
               <span class="badge badge-amber">GPA ≥ 3.20 / 4.00</span>
             </div>
 
-            <h1 class="hero-title">
+            <h1 class="hero-title" data-i18n="hero.title">
               Deterministic <span class="accent">Hardware–Firmware</span> Co-Design for Real-Time IoT
             </h1>
-            <p class="hero-subtitle">
+            <p class="hero-subtitle" data-i18n="hero.subtitle">
               Thiraphat Thongsing (ธีรภัทร ทองสิงห์) — Year 3 Computer Engineering, KMITL Prince of Chumphon
             </p>
-            <p class="hero-desc">
+            <p class="hero-desc" data-i18n="hero.desc">
               I engineer bare-metal ESP32 &amp; Arduino firmware, analog/capacitive comparator front-ends,
               custom 2-layer EasyEDA PCBs, and resilient MQTT/ESP-NOW telemetry pipelines. Placed
               <strong>#1 in Embedded Integration (52.8/55)</strong> and <strong>#3 in Day 2 Sensing (38.4/40)</strong>
@@ -78,9 +102,9 @@
             </p>
 
             <div class="hero-cta">
-              <a class="btn btn-primary" href="#projects">Inspect Flagship Systems</a>
-              <a class="btn btn-secondary" href="#moisture-lab">Launch Live Firmware Sim</a>
-              <a class="btn btn-secondary" href="assets/Resume-Thiraphat-Thongsing.pdf" target="_blank" rel="noopener">
+              <a class="btn btn-primary" href="#internship" data-i18n="hero.ctaBrief">Recruiter Brief &amp; Readiness</a>
+              <a class="btn btn-secondary" href="#projects" data-i18n="hero.ctaProjects">Inspect Flagship Systems</a>
+              <a class="btn btn-secondary" href="assets/Resume-Thiraphat-Thongsing.pdf" target="_blank" rel="noopener" data-i18n="hero.ctaResume">
                 Open Resume (PDF)
               </a>
             </div>
@@ -133,8 +157,8 @@
                 <strong>EasyEDA · SolidWorks</strong>
               </div>
               <div class="spec-chip">
-                <small>Location</small>
-                <strong>Chumphon, TH</strong>
+                <small data-i18n="hero.specRelocLabel">Relocation</small>
+                <strong data-i18n="hero.specRelocVal">BKK / EEC / Hybrid</strong>
               </div>
             </div>
           </aside>
@@ -145,14 +169,42 @@
       </div>
     </section>
 
+    <!-- ==================== RECRUITER QUICK-BRIEF / INTERNSHIP READINESS ==================== -->
+    <section class="section" id="internship">
+      <div class="container">
+        <div class="section-header">
+          <div>
+            <div class="eyebrow" data-i18n="intern.eyebrow">Recruiter Quick-Brief · Internship Application</div>
+            <h2 class="section-title" data-i18n="intern.title">Internship Profile &amp; Day-1 Readiness</h2>
+            <p class="section-sub" data-i18n="intern.sub">
+              At-a-glance hiring summary covering target roles, relocation flexibility, and immediate hardware–firmware capabilities backed by verified proofs.
+            </p>
+          </div>
+          <div class="recruiter-actions">
+            <a class="btn btn-primary btn-sm" href="assets/Resume-Thiraphat-Thongsing.pdf" target="_blank" rel="noopener" data-i18n="intern.btnResume">
+              Download Resume PDF
+            </a>
+            <button class="btn btn-secondary btn-sm" id="copyPortfolioBtn" type="button" data-i18n="intern.btnCopy">
+              Copy Portfolio Link
+            </button>
+            <button class="btn btn-secondary btn-sm" id="printPortfolioBtn" type="button" data-i18n="intern.btnPrint">
+              Print / Save PDF
+            </button>
+          </div>
+        </div>
+
+        <div id="internshipBriefContainer"></div>
+      </div>
+    </section>
+
     <!-- ==================== SCOREBOOK PROOF SECTION (score.jpg) ==================== -->
     <section class="section" id="scorebook">
       <div class="container">
         <div class="section-header">
           <div>
-            <div class="eyebrow">Competition Proof · Nov 15–21, 2026</div>
-            <h2 class="section-title">TESA Top Gun Rally 2026 #20 Official Scorebook</h2>
-            <p class="section-sub">
+            <div class="eyebrow" data-i18n="score.eyebrow">Competition Proof · Nov 15–21, 2026</div>
+            <h2 class="section-title" data-i18n="score.title">TESA Top Gun Rally 2026 #20 Official Scorebook</h2>
+            <p class="section-sub" data-i18n="score.sub">
               Official team scorecard from <code>tesa-score.c333m.site</code> for Team <strong>TGR-51 (กาแฟอยู่นี่ / Coffee-is-Here)</strong>,
               highlighting Track 1 Embedded Integration <strong>#1 nationally (52.8/55)</strong> and Day 2 Precision Sensing <strong>#3 (38.4/40)</strong>.
             </p>
@@ -225,9 +277,9 @@
       <div class="container">
         <div class="section-header">
           <div>
-            <div class="eyebrow">Official Credential · Nov 15–21, 2026</div>
-            <h2 class="section-title">Verified Competition Certificate</h2>
-            <p class="section-sub">
+            <div class="eyebrow" data-i18n="cert.eyebrow">Official Credential · Nov 15–21, 2026</div>
+            <h2 class="section-title" data-i18n="cert.title">Verified Competition Certificate</h2>
+            <p class="section-sub" data-i18n="cert.sub">
               Signed physical certificate jointly issued by the <strong>Thai Embedded Systems Association (TESA)</strong> and
               <strong>KMITL School of Engineering &amp; Prince of Chumphon Campus</strong>.
             </p>
@@ -251,9 +303,9 @@
       <div class="container">
         <div class="section-header">
           <div>
-            <div class="eyebrow">Hardware · Firmware · Telemetry</div>
-            <h2 class="section-title">Flagship Embedded Engineering Systems</h2>
-            <p class="section-sub">
+            <div class="eyebrow" data-i18n="proj.eyebrow">Hardware · Firmware · Telemetry</div>
+            <h2 class="section-title" data-i18n="proj.title">Flagship Embedded Engineering Systems</h2>
+            <p class="section-sub" data-i18n="proj.sub">
               End-to-end engineering dossiers with live firmware simulators, authentic schematics, custom PCB layouts,
               and quantified bench &amp; competition verification results.
             </p>
@@ -277,6 +329,8 @@
               <span class="badge">MQTT · FastAPI Seam Hub</span>
             </div>
           </div>
+
+          <div class="contrib-banner" id="contrib-p1"></div>
 
           <div class="tab-bar" data-tab-group="proj1">
             <button class="tab-btn active" type="button" data-tab="p1-sim">Interactive Firmware &amp; Calibration Lab</button>
@@ -514,6 +568,8 @@
             </div>
           </div>
 
+          <div class="contrib-banner" id="contrib-p2"></div>
+
           <div class="tab-bar" data-tab-group="proj2">
             <button class="tab-btn active" type="button" data-tab="p2-arch">Hardware, PCB &amp; Non-Blocking Flow</button>
             <button class="tab-btn" type="button" data-tab="p2-trials">13-Scenario Test Matrix (1,300 Trials)</button>
@@ -644,6 +700,8 @@
             </div>
           </div>
 
+          <div class="contrib-banner" id="contrib-p3"></div>
+
           <div class="two-col">
             <div class="subcard">
               <h4>RF Firmware &amp; 6-Node IoT Pipeline</h4>
@@ -712,9 +770,9 @@
       <div class="container">
         <div class="section-header">
           <div>
-            <div class="eyebrow">Capabilities Matrix</div>
-            <h2 class="section-title">Hardware-to-Cloud Technical Stack</h2>
-            <p class="section-sub">
+            <div class="eyebrow" data-i18n="skills.eyebrow">Capabilities Matrix</div>
+            <h2 class="section-title" data-i18n="skills.title">Hardware-to-Cloud Technical Stack</h2>
+            <p class="section-sub" data-i18n="skills.sub">
               Tools, microcontrollers, instrumentation, protocols, and security stacks verified across competition builds and university lab work.
             </p>
           </div>
@@ -729,9 +787,9 @@
       <div class="container">
         <div class="section-header">
           <div>
-            <div class="eyebrow">Verified Coursework · 37+ Lab Reports</div>
-            <h2 class="section-title">Core Engineering Laboratories</h2>
-            <p class="section-sub">
+            <div class="eyebrow" data-i18n="labs.eyebrow">Verified Coursework · 37+ Lab Reports</div>
+            <h2 class="section-title" data-i18n="labs.title">Core Engineering Laboratories</h2>
+            <p class="section-sub" data-i18n="labs.sub">
               Hands-on hardware, FPGA, oscilloscope signal capture, enterprise Huawei routing/switching, and Linux/Docker defense labs at KMITL Chumphon.
             </p>
           </div>
@@ -754,11 +812,11 @@
       <div class="container">
         <div class="contact-panel">
           <div>
-            <div class="eyebrow">Education &amp; Internship Availability</div>
-            <h2 class="section-title" style="font-size: clamp(1.5rem, 2.6vw, 2rem);">
+            <div class="eyebrow" data-i18n="contact.eyebrow">Education &amp; Internship Availability</div>
+            <h2 class="section-title" style="font-size: clamp(1.5rem, 2.6vw, 2rem);" data-i18n="contact.title">
               Ready to Contribute to Embedded Hardware &amp; Firmware Teams
             </h2>
-            <p class="section-sub" style="margin-top: 0.65rem;">
+            <p class="section-sub" style="margin-top: 0.65rem;" data-i18n="contact.sub">
               <strong>King Mongkut's Institute of Technology Ladkrabang (KMITL)</strong> — Prince of Chumphon Campus<br />
               B.Eng. in Computer Engineering (Year 3) · Cumulative GPA: <strong>≥ 3.20 / 4.00</strong> · Expected Graduation: <strong>2028</strong><br />
               Extracurricular: University Badminton Player / Club Member
@@ -784,8 +842,8 @@
               </div>
             </div>
             <div>
-              <small class="mono" style="color: var(--text-dim);">LOCATION</small>
-              <div>KMITL Prince of Chumphon, Chumphon, Thailand</div>
+              <small class="mono" style="color: var(--text-dim);">RELOCATION &amp; WORK PREFERENCE</small>
+              <div data-i18n="contact.reloc">Based at KMITL Chumphon · Ready to relocate to Bangkok, Metro &amp; EEC (Chonburi / Rayong) — On-site &amp; Hybrid</div>
             </div>
             <div style="display: flex; flex-wrap: wrap; gap: 0.6rem; margin-top: 0.25rem;">
               <a class="btn btn-primary btn-sm" href="assets/Resume-Thiraphat-Thongsing.pdf" target="_blank" rel="noopener">

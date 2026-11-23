@@ -31,6 +31,167 @@
     });
   }
 
+  // Active Scroll-Spy for Sticky Navbar
+  const navAnchors = navLinks ? Array.from(navLinks.querySelectorAll('a[href^="#"]')) : [];
+  const spyTargets = navAnchors
+    .map((a) => ({ link: a, section: document.querySelector(a.getAttribute("href")) }))
+    .filter((item) => item.section);
+
+  if (spyTargets.length && "IntersectionObserver" in window) {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            navAnchors.forEach((a) => a.classList.remove("active"));
+            const activeItem = spyTargets.find((t) => t.section === entry.target);
+            if (activeItem) activeItem.link.classList.add("active");
+          }
+        });
+      },
+      { rootMargin: "-25% 0px -60% 0px", threshold: 0.01 }
+    );
+    spyTargets.forEach((t) => observer.observe(t.section));
+  }
+
+  // ---------------- Bilingual (EN / TH) & Recruiter Brief Rendering ----------------
+  let currentLang = "en";
+  try {
+    const savedLang = localStorage.getItem("portfolio_lang");
+    if (savedLang === "th" || savedLang === "en") currentLang = savedLang;
+  } catch {
+    // Ignore storage errors in restricted contexts
+  }
+
+  const defaultEnHtml = new Map();
+  document.querySelectorAll("[data-i18n]").forEach((node) => {
+    defaultEnHtml.set(node, node.innerHTML);
+  });
+
+  function renderInternshipBrief(lang) {
+    const container = el("internshipBriefContainer");
+    if (!container || !DATA.internshipBrief) return;
+    const brief = DATA.internshipBrief[lang] || DATA.internshipBrief.en;
+
+    const rolesHtml = brief.roles
+      .map((r) => `<span class="badge badge-cyan">${escapeHtml(r)}</span>`)
+      .join("");
+
+    const factsHtml = brief.facts
+      .map(
+        (f) => `
+        <div class="fact-card accent-${escapeHtml(f.accent)}">
+          <small>${escapeHtml(f.label)}</small>
+          <strong>${escapeHtml(f.value)}</strong>
+          <span>${escapeHtml(f.detail)}</span>
+        </div>`
+      )
+      .join("");
+
+    const pillarsHtml = brief.pillars
+      .map(
+        (p) => `
+        <div class="pillar-card">
+          <span class="badge">${escapeHtml(p.tag)}</span>
+          <h3>${escapeHtml(p.title)}</h3>
+          <p>${escapeHtml(p.summary)}</p>
+        </div>`
+      )
+      .join("");
+
+    container.innerHTML = `
+      <div class="recruiter-dossier">
+        <div class="role-bar">
+          <span class="role-bar-label">${escapeHtml(brief.rolesLabel)}:</span>
+          ${rolesHtml}
+        </div>
+        <div class="recruiter-facts">${factsHtml}</div>
+        <div>
+          <div class="pillars-heading">${escapeHtml(brief.pillarsHeading)}</div>
+          <div class="pillar-grid">${pillarsHtml}</div>
+        </div>
+      </div>`;
+  }
+
+  function renderProjectContributions(lang) {
+    if (!DATA.projectContributions) return;
+    ["p1", "p2", "p3"].forEach((key) => {
+      const box = el(`contrib-${key}`);
+      const entry = DATA.projectContributions[key];
+      if (!box || !entry) return;
+      const c = entry[lang] || entry.en;
+      box.innerHTML = `
+        <div class="contrib-col">
+          <small>${escapeHtml(c.roleLabel)}</small>
+          <p>${escapeHtml(c.owned)}</p>
+        </div>
+        <div class="contrib-col contrib-impact">
+          <small>${escapeHtml(c.impactLabel)}</small>
+          <strong>${escapeHtml(c.impact)}</strong>
+        </div>`;
+    });
+  }
+
+  function applyLanguage(lang) {
+    currentLang = lang === "th" ? "th" : "en";
+    document.documentElement.lang = currentLang;
+    try {
+      localStorage.setItem("portfolio_lang", currentLang);
+    } catch {
+      // Ignore storage errors
+    }
+
+    const thMap = (DATA.i18n && DATA.i18n.th) || {};
+    defaultEnHtml.forEach((enHtml, node) => {
+      const key = node.getAttribute("data-i18n");
+      if (currentLang === "th" && thMap[key]) {
+        node.innerHTML = thMap[key];
+      } else {
+        node.innerHTML = enHtml;
+      }
+    });
+
+    document.querySelectorAll(".lang-btn[data-lang]").forEach((btn) => {
+      btn.classList.toggle("active", btn.getAttribute("data-lang") === currentLang);
+    });
+
+    renderInternshipBrief(currentLang);
+    renderProjectContributions(currentLang);
+  }
+
+  document.querySelectorAll(".lang-btn[data-lang]").forEach((btn) => {
+    btn.addEventListener("click", () => applyLanguage(btn.getAttribute("data-lang")));
+  });
+
+  applyLanguage(currentLang);
+
+  // Copy Portfolio Link & Print/Save PDF Buttons
+  const copyPortfolioBtn = el("copyPortfolioBtn");
+  let copyUrlTimer = null;
+  if (copyPortfolioBtn) {
+    copyPortfolioBtn.addEventListener("click", async () => {
+      const url = (DATA.profile && DATA.profile.portfolioUrl) || window.location.href;
+      try {
+        await navigator.clipboard.writeText(url);
+        clearTimeout(copyUrlTimer);
+        copyPortfolioBtn.textContent = currentLang === "th" ? "คัดลอกลิงก์แล้ว!" : "Copied URL!";
+        copyUrlTimer = setTimeout(() => {
+          const thMap = (DATA.i18n && DATA.i18n.th) || {};
+          copyPortfolioBtn.innerHTML =
+            currentLang === "th" && thMap["intern.btnCopy"]
+              ? thMap["intern.btnCopy"]
+              : defaultEnHtml.get(copyPortfolioBtn) || "Copy Portfolio Link";
+        }, 1800);
+      } catch {
+        window.prompt("Copy portfolio URL:", url);
+      }
+    });
+  }
+
+  const printPortfolioBtn = el("printPortfolioBtn");
+  if (printPortfolioBtn) {
+    printPortfolioBtn.addEventListener("click", () => window.print());
+  }
+
   // ---------------- Render Hero Telemetry Strip ----------------
   const heroKpis = el("heroKpis");
   if (heroKpis) {

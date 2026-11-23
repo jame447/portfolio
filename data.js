@@ -19,7 +19,8 @@ window.PORTFOLIO_DATA = {
     graduation: "Expected 2028",
     email: "tudtudtudut05@gmail.com",
     githubUrl: "https://github.com/jame447",
-    location: "Chumphon, Thailand",
+    portfolioUrl: "https://jame447.github.io/portfolio/",
+    location: "Chumphon, Thailand (Ready to relocate: Bangkok / Metro / EEC)",
     teamCode: "TGR-51 (กาแฟอยู่นี่ / Coffee-is-Here)",
     activities: "University Badminton Player / Club Member",
     resumeUrl: "assets/Resume-Thiraphat-Thongsing.pdf",
@@ -27,6 +28,186 @@ window.PORTFOLIO_DATA = {
     scorePhotoUrl: "assets/score.jpg",
     certificateUrl: "assets/certificate.jpg",
     rackPhotoUrl: "assets/rack-67200368.png"
+  },
+
+  internshipBrief: {
+    en: {
+      rolesLabel: "Target Internship Roles",
+      roles: [
+        "Embedded Systems Intern",
+        "Firmware Engineer Intern (ESP32 / C/C++)",
+        "IoT Hardware & PCB Design Intern"
+      ],
+      facts: [
+        { label: "Internship Status", value: "Open for Embedded & IoT Internship", detail: "Flexible schedule & duration", accent: "emerald" },
+        { label: "Location & Mobility", value: "Ready to Relocate", detail: "Bangkok · Metro · EEC (Chonburi / Rayong) · On-site & Hybrid", accent: "cyan" },
+        { label: "Academic Standing", value: "B.Eng. Computer Engineering (Year 3)", detail: "KMITL Prince of Chumphon · GPAX ≥ 3.20 / 4.00 · Exp. 2028", accent: "amber" },
+        { label: "Verified Track Record", value: "#1 TESA Top Gun Rally 2026", detail: "52.8/55 Integration · Official TESA/KMITL Certificate", accent: "emerald" }
+      ],
+      pillarsHeading: "What I Can Contribute on Day 1",
+      pillars: [
+        {
+          tag: "FIRMWARE · C / C++",
+          title: "Bare-Metal & Real-Time MCU Bring-Up",
+          summary:
+            "Write deterministic ESP32 & Arduino C/C++ firmware using hardware timers, Xtensa CCOUNT polling, non-blocking state machines, NVS Flash persistence, and clean SPI / I2C / UART drivers."
+        },
+        {
+          tag: "HARDWARE · PCB · LAB",
+          title: "Analog Front-Ends, 2-Layer PCB & Bench Debug",
+          summary:
+            "Design schematics and custom 2-layer PCBs in EasyEDA with voltage dividers & flyback protection, and validate circuits using Tektronix oscilloscopes, LCR meters, and DMMs."
+        },
+        {
+          tag: "IOT · VERIFICATION",
+          title: "Edge-to-Cloud Telemetry & Quantitative QA",
+          summary:
+            "Integrate ESP-NOW, NRF24L01, MQTT, and HTTP/REST links with Python test validators, Linux/Docker tooling, and structured multi-scenario hardware reliability testing."
+        }
+      ]
+    },
+    th: {
+      rolesLabel: "ตำแหน่งฝึกงานที่สนใจสมัคร",
+      roles: [
+        "Embedded Systems Intern",
+        "Firmware Engineer Intern (ESP32 / C/C++)",
+        "IoT Hardware & PCB Design Intern"
+      ],
+      facts: [
+        { label: "สถานะการฝึกงาน", value: "เปิดรับโอกาสฝึกงาน Embedded & IoT", detail: "ยืดหยุ่นช่วงเวลาและระยะเวลาฝึกงานได้", accent: "emerald" },
+        { label: "พื้นที่ที่สะดวกฝึกงาน", value: "พร้อมย้ายที่อยู่ไปฝึกงานได้", detail: "กรุงเทพฯ · ปริมณฑล · EEC (ชลบุรี / ระยอง) · On-site & Hybrid", accent: "cyan" },
+        { label: "การศึกษา", value: "วิศวกรรมคอมพิวเตอร์ ปี 3 (สจล.)", detail: "KMITL วิทยาเขตชุมพรเขตรอุดมศักดิ์ · GPAX ≥ 3.20 · คาดจบปี 2028", accent: "amber" },
+        { label: "ผลงานระดับประเทศ", value: "อันดับ 1 TESA Top Gun Rally 2026", detail: "Embedded Integration 52.8/55 · มีเกียรติบัตรรับรอง", accent: "emerald" }
+      ],
+      pillarsHeading: "สิ่งที่พร้อมช่วยทีมตั้งแต่วันแรก (Day-1 Readiness)",
+      pillars: [
+        {
+          tag: "FIRMWARE · C / C++",
+          title: "พัฒนาเฟิร์มแวร์ ESP32 / Arduino แบบ Real-Time",
+          summary:
+            "เขียน C/C++ ระดับ Register/Timer (Xtensa CCOUNT, PCNT, PWM), Non-blocking State Machine, บันทึกค่าลง NVS Flash และสื่อสาร SPI / I2C / UART ได้เสถียร"
+        },
+        {
+          tag: "HARDWARE · PCB · LAB",
+          title: "ออกแบบวงจร PCB 2 ชั้น และวัดสัญญาณหน้างาน",
+          summary:
+            "ออกแบบ Schematic และ Custom 2-Layer PCB บน EasyEDA พร้อมวงจรป้องกัน (Divider / Flyback) และไล่ดีบักฮาร์ดแวร์ด้วย Oscilloscope, LCR Meter และ DMM"
+        },
+        {
+          tag: "IOT · VERIFICATION",
+          title: "เชื่อมต่อระบบ IoT และทดสอบเชิงปริมาณ",
+          summary:
+            "เชื่อมระบบไร้สาย ESP-NOW, NRF24L01, MQTT, HTTP/REST ร่วมกับสคริปต์ทดสอบ Python, Linux/Docker และทดสอบความเสถียรเชิงระบบหลายร้อยรอบ"
+        }
+      ]
+    }
+  },
+
+  projectContributions: {
+    p1: {
+      en: {
+        roleLabel: "My Personal Ownership (Track 1 Lead · Team TGR-51)",
+        owned:
+          "Engineered the LM393 inverting comparator circuit, 3-slot PCB capacitive box, 240 MHz CCOUNT ESP32 firmware (v1–v24), 3-model regression + NVS Flash, and Python validator vs. DICKEY-john mini GAC (while teammates built RPi 5 Edge AI, FastAPI backend, Trading Agent, and Next.js UI).",
+        impactLabel: "Verified Engineering Result",
+        impact: "#1 Embedded Integration (52.8/55) · #3 Day 2 Precision Sensing (38.4/40) · 0.00 ns SD jitter"
+      },
+      th: {
+        roleLabel: "บทบาทและส่วนที่รับผิดชอบโดยตรง (หัวหน้าสาย Embedded · ทีม TGR-51)",
+        owned:
+          "ออกแบบวงจร LM393 Comparator และกล่องวัดความจุไฟฟ้า 3 ช่อง, เขียนเฟิร์มแวร์ ESP32 จับเวลา CCOUNT 240 MHz (v1–v24), ระบบคาลิเบรต 3 โมเดลพร้อม NVS Flash และสคริปต์ Python เทียบเครื่องมาตรฐาน mini GAC (แยกจากส่วน Edge AI, Backend และ Dashboard ของเพื่อนร่วมทีม)",
+        impactLabel: "ผลลัพธ์ที่ตรวจสอบได้",
+        impact: "อันดับ 1 Embedded Integration (52.8/55) · อันดับ 3 Day 2 Sensing (38.4/40) · ความนิ่ง 0.00 ns SD"
+      }
+    },
+    p2: {
+      en: {
+        roleLabel: "My Personal Ownership (Hardware & PCB Design Lead)",
+        owned:
+          "Designed the custom 2-layer EasyEDA carrier PCB, isolated VSPI/HSPI dual MFRC522 bus wiring, 1 kΩ/2 kΩ ultrasonic Echo level protection, 1N4007 flyback solenoid relay stage, ESP32↔ESP32-CAM ESP-NOW wake architecture, and 3D-printed dual-unit enclosure.",
+        impactLabel: "Verified Engineering Result",
+        impact: "99.62% pass rate across 1,300 hardware/E2E trials (11/13 test scenarios achieved 100%)"
+      },
+      th: {
+        roleLabel: "บทบาทและส่วนที่รับผิดชอบโดยตรง (หัวหน้าด้าน Hardware & ออกแบบ PCB)",
+        owned:
+          "ออกแบบ Custom 2-Layer PCB บน EasyEDA, แยกบัส Dual-SPI (VSPI/HSPI) สำหรับ RFID 2 ตัว, วงจร Divider 1kΩ/2kΩ ป้องกันขา Echo 5V, ไดโอด 1N4007 Flyback คุมกลอน 12V, ระบบปลุก ESP32-CAM ผ่าน ESP-NOW และเคส 3D-Printed 2 ชิ้น",
+        impactLabel: "ผลลัพธ์ที่ตรวจสอบได้",
+        impact: "ผ่านการทดสอบ 99.62% จาก 1,300 รอบ (1,295/1,300) โดยผ่านเต็ม 100% ถึง 11 จาก 13 สถานการณ์"
+      }
+    },
+    p3: {
+      en: {
+        roleLabel: "My Personal Ownership (Embedded Software Developer · Node 2 / Group CE04)",
+        owned:
+          "Built the Arduino Uno R3 NRF24L01 Ch.66 RF packet parser (AL,<node>,<text>,<cmd>), 80 ms debounced mute & ≥1.2 s long-press reset state machine, active-LOW 12 V siren relay + 16×2 I2C LCD feedback, and SolidWorks 3D-printed enclosure.",
+        impactLabel: "Verified Engineering Result",
+        impact: "Reliable real-time RF alarm subsystem integrated across a 6-node MQTT / Node-RED / Looker IoT pipeline"
+      },
+      th: {
+        roleLabel: "บทบาทและส่วนที่รับผิดชอบโดยตรง (ผู้พัฒนา Firmware · Node 2 กลุ่ม CE04)",
+        owned:
+          "พัฒนาเฟิร์มแวร์ Arduino Uno R3 รับและแยกแพ็กเก็ต NRF24L01 ช่อง 66 (AL,<node>,<text>,<cmd>), ลอจิกปุ่มกด Debounce 80 ms (กดสั้น Mute / กดค้าง ≥1.2 วิ Reset), คุมรีเลย์ไซเรน 12V + จอ LCD 16×2 และออกแบบกล่อง 3D ด้วย SolidWorks",
+        impactLabel: "ผลลัพธ์ที่ตรวจสอบได้",
+        impact: "ระบบแจ้งเตือนไร้สายทำงานเชื่อมต่อจริงร่วมกับระบบ IoT 6 โหนด (MQTT / Node-RED / Looker Studio)"
+      }
+    }
+  },
+
+  i18n: {
+    th: {
+      "nav.internship": "ข้อมูลฝึกงาน",
+      "nav.scorebook": "คะแนน TESA",
+      "nav.certificate": "เกียรติบัตร",
+      "nav.projects": "โปรเจกต์หลัก",
+      "nav.sim": "จำลองเฟิร์มแวร์",
+      "nav.stack": "ทักษะ",
+      "nav.labs": "แล็บวิศวกรรม",
+      "nav.contact": "ติดต่อ",
+      "nav.resume": "เรซูเม่ PDF",
+      "hero.badgeAvail": '<span class="pulse-dot"></span> เปิดรับโอกาสฝึกงาน Embedded &amp; IoT (พร้อมย้ายพื้นที่)',
+      "hero.title": 'วิศวกรรม <span class="accent">Hardware–Firmware</span> ความแม่นยำสูงสำหรับระบบ Real-Time IoT',
+      "hero.subtitle": "ธีรภัทร ทองสิงห์ (Thiraphat Thongsing) — นักศึกษาวิศวกรรมคอมพิวเตอร์ ชั้นปีที่ 3 สจล. วิทยาเขตชุมพรฯ",
+      "hero.desc":
+        'พัฒนาเฟิร์มแวร์ ESP32 &amp; Arduino (C/C++), วงจรแอนะล็อก/คอมพาเรเตอร์, ออกแบบบอร์ด PCB 2 ชั้นด้วย EasyEDA และระบบรับส่งข้อมูล IoT (MQTT / ESP-NOW) คว้ารางวัล <strong>อันดับ 1 Embedded Integration (52.8/55)</strong> และ <strong>อันดับ 3 Day 2 Sensing (38.4/40)</strong> จากการแข่งขัน TESA Top Gun Rally 2026',
+      "hero.ctaBrief": "ดูข้อมูลสำหรับยื่นฝึกงาน",
+      "hero.ctaProjects": "ดูโปรเจกต์วิศวกรรมหลัก",
+      "hero.ctaResume": "เปิดเรซูเม่ (PDF)",
+      "hero.specRelocLabel": "พื้นที่ฝึกงาน",
+      "hero.specRelocVal": "กทม. / EEC / Hybrid",
+      "intern.eyebrow": "Recruiter Quick-Brief · สำหรับฝ่ายบุคคลและหัวหน้าทีมวิศวกร",
+      "intern.title": "ข้อมูลความพร้อมสำหรับการฝึกงาน (Internship Readiness)",
+      "intern.sub":
+        "สรุปตำแหน่งที่สนใจ ความพร้อมในการย้ายพื้นที่ และทักษะที่สามารถลงมือช่วยทีมวิศวกรรมได้ตั้งแต่วันแรก พร้อมหลักฐานผลงานที่ตรวจสอบได้จริง",
+      "intern.btnResume": "ดาวน์โหลดเรซูเม่ PDF",
+      "intern.btnCopy": "คัดลอกลิงก์ Portfolio",
+      "intern.btnPrint": "พิมพ์ / บันทึกเป็น PDF",
+      "score.eyebrow": "หลักฐานผลการแข่งขัน · 15–21 พ.ย. 2026",
+      "score.title": "ตารางคะแนนทางการ TESA Top Gun Rally 2026 ครั้งที่ 20",
+      "score.sub":
+        'ผลคะแนนอย่างเป็นทางการของทีม <strong>TGR-51 (กาแฟอยู่นี่ / Coffee-is-Here)</strong> จากระบบ <code>tesa-score.c333m.site</code> โดยสายงาน Embedded ได้ <strong>อันดับ 1 รอบ Integration (52.8/55)</strong> และ <strong>อันดับ 3 รอบ Day 2 (38.4/40)</strong>',
+      "cert.eyebrow": "เกียรติบัตรรับรอง · 15–21 พ.ย. 2026",
+      "cert.title": "เกียรติบัตรการแข่งขันระดับประเทศ (Verified Certificate)",
+      "cert.sub":
+        "เกียรติบัตรฉบับจริงลงนามรับรองร่วมกันโดย <strong>สมาคมสมองกลฝังตัวไทย (TESA)</strong> และ <strong>คณะวิศวกรรมศาสตร์ สจล. &amp; วิทยาเขตชุมพรเขตรอุดมศักดิ์</strong>",
+      "proj.eyebrow": "Hardware · Firmware · Telemetry",
+      "proj.title": "โปรเจกต์วิศวกรรมระบบสมองกลฝังตัวหลัก (Flagship Systems)",
+      "proj.sub":
+        "สรุปบทบาทที่รับผิดชอบโดยตรง สถาปัตยกรรมวงจรและเฟิร์มแวร์ พร้อมเครื่องมือจำลองการทำงาน ผังวงจรจริง และผลทดสอบเชิงปริมาณ",
+      "skills.eyebrow": "Capabilities Matrix",
+      "skills.title": "ทักษะทางเทคนิคตั้งแต่ระดับฮาร์ดแวร์ถึงคลาวด์",
+      "skills.sub":
+        "ไมโครคอนโทรลเลอร์ เครื่องมือวัดทางไฟฟ้า โปรโตคอลสื่อสาร งานออกแบบ PCB/FPGA และพื้นฐานระบบเครือข่าย/ความปลอดภัยที่ผ่านการใช้งานจริง",
+      "labs.eyebrow": "ปฏิบัติการวิศวกรรม · กว่า 37 รายงานแล็บ",
+      "labs.title": "คลังปฏิบัติการวิศวกรรมหลัก (Core Engineering Labs)",
+      "labs.sub":
+        "ประสบการณ์ลงมือทำจริงด้าน FPGA, การวัดคลื่นสัญญาณด้วย Oscilloscope, ตั้งค่าอุปกรณ์เครือข่าย Huawei ระดับองค์กร และความมั่นคงปลอดภัย Linux/Docker",
+      "contact.eyebrow": "การศึกษาและการติดต่อสำหรับฝึกงาน",
+      "contact.title": "พร้อมเข้าร่วมทีมวิศวกรรม Embedded Hardware &amp; Firmware",
+      "contact.sub":
+        '<strong>สถาบันเทคโนโลยีพระจอมเกล้าเจ้าคุณทหารลาดกระบัง (สจล.)</strong> — วิทยาเขตชุมพรเขตรอุดมศักดิ์<br />วิศวกรรมศาสตรบัณฑิต สาขาวิศวกรรมคอมพิวเตอร์ (ชั้นปีที่ 3) · เกรดเฉลี่ยสะสม: <strong>≥ 3.20 / 4.00</strong> · คาดว่าจะสำเร็จการศึกษา: <strong>2028</strong><br />กิจกรรม: นักกีฬาแบดมินตันมหาวิทยาลัย / สมาชิกชมรมแบดมินตัน',
+      "contact.reloc": "ฐานที่ตั้ง สจล. ชุมพร · พร้อมย้ายไปฝึกงาน กรุงเทพฯ / ปริมณฑล / EEC (ชลบุรี–ระยอง) — On-site & Hybrid"
+    }
   },
 
   heroMetrics: [
