@@ -30,10 +30,11 @@
 
       <ul class="nav-links" id="navLinks">
         <li><a href="#scorebook">Scorebook</a></li>
+        <li><a href="#certificates">Certificate</a></li>
         <li><a href="#projects">Systems</a></li>
         <li><a href="#moisture-lab">Firmware Sim</a></li>
         <li><a href="#skills">Stack</a></li>
-        <li><a href="#labs">Engineering Labs</a></li>
+        <li><a href="#labs">Labs</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
 
@@ -149,21 +150,31 @@
       <div class="container">
         <div class="section-header">
           <div>
-            <div class="eyebrow">Competition Proof · Nov 2026</div>
+            <div class="eyebrow">Competition Proof · Nov 15–21, 2026</div>
             <h2 class="section-title">TESA Top Gun Rally 2026 #20 Official Scorebook</h2>
             <p class="section-sub">
               Official team scorecard from <code>tesa-score.c333m.site</code> for Team <strong>TGR-51 (กาแฟอยู่นี่ / Coffee-is-Here)</strong>,
               highlighting Track 1 Embedded Integration <strong>#1 nationally (52.8/55)</strong> and Day 2 Precision Sensing <strong>#3 (38.4/40)</strong>.
             </p>
           </div>
-          <button
-            class="btn btn-secondary btn-sm"
-            type="button"
-            data-lightbox="assets/score.jpg"
-            data-caption="Official TESA Top Gun Rally 2026 Scorebook — Team TGR-51 (79.53/100 Total, #1 Embedded Integration, #3 Day 2)"
-          >
-            Inspect Full Score Photo ⤢
-          </button>
+          <div class="scorebook-actions">
+            <button
+              class="btn btn-secondary btn-sm"
+              type="button"
+              data-lightbox="assets/score.jpg"
+              data-caption="Official TESA Top Gun Rally 2026 Scorebook — Team TGR-51 (79.53/100 Total, #1 Embedded Integration, #3 Day 2)"
+            >
+              Inspect Full Score Photo ⤢
+            </button>
+            <button
+              class="btn btn-secondary btn-sm"
+              type="button"
+              data-lightbox="assets/certificate.jpg"
+              data-caption="Official Certificate of Participation — The TESA Top Gun Rally 2026 (Nov 15–21, 2026, KMITL Chumphon) presented to Thiraphat Thongsing (Team TGR-51)"
+            >
+              View Certificate ⤢
+            </button>
+          </div>
         </div>
 
         <div class="scorebook-grid">
@@ -185,7 +196,7 @@
 
           <aside class="scorebook-photo-card">
             <div style="display: flex; justify-content: space-between; align-items: center;">
-              <strong style="font-family: var(--font-display); font-size: 0.96rem;">Verified Screenshot (`score.jpg`)</strong>
+              <strong style="font-family: var(--font-display); font-size: 0.96rem;">Verified Screenshot (<code>score.jpg</code>)</strong>
               <span class="badge badge-emerald">Scroll / Click Zoom</span>
             </div>
             <div
@@ -206,6 +217,32 @@
             </small>
           </aside>
         </div>
+      </div>
+    </section>
+
+    <!-- ==================== OFFICIAL CERTIFICATES SECTION ==================== -->
+    <section class="section" id="certificates">
+      <div class="container">
+        <div class="section-header">
+          <div>
+            <div class="eyebrow">Official Credential · Nov 15–21, 2026</div>
+            <h2 class="section-title">Verified Competition Certificate</h2>
+            <p class="section-sub">
+              Signed physical certificate jointly issued by the <strong>Thai Embedded Systems Association (TESA)</strong> and
+              <strong>KMITL School of Engineering &amp; Prince of Chumphon Campus</strong>.
+            </p>
+          </div>
+          <button
+            class="btn btn-secondary btn-sm"
+            type="button"
+            data-lightbox="assets/certificate.jpg"
+            data-caption="Official Certificate of Participation — The TESA Top Gun Rally 2026 (Nov 15–21, 2026, KMITL Chumphon) presented to Thiraphat Thongsing (Team TGR-51)"
+          >
+            Inspect Full Certificate ⤢
+          </button>
+        </div>
+
+        <div id="certificatesContainer"></div>
       </div>
     </section>
 
@@ -739,6 +776,14 @@
               </div>
             </div>
             <div>
+              <small class="mono" style="color: var(--text-dim);">GITHUB</small>
+              <div style="margin-top: 0.2rem;">
+                <a class="mono" href="https://github.com/jame447" target="_blank" rel="noopener" style="color: var(--cyan); font-weight: 600;">
+                  github.com/jame447 ↗
+                </a>
+              </div>
+            </div>
+            <div>
               <small class="mono" style="color: var(--text-dim);">LOCATION</small>
               <div>KMITL Prince of Chumphon, Chumphon, Thailand</div>
             </div>
@@ -746,6 +791,14 @@
               <a class="btn btn-primary btn-sm" href="assets/Resume-Thiraphat-Thongsing.pdf" target="_blank" rel="noopener">
                 Download / View Resume PDF
               </a>
+              <button
+                class="btn btn-secondary btn-sm"
+                type="button"
+                data-lightbox="assets/certificate.jpg"
+                data-caption="Official Certificate of Participation — The TESA Top Gun Rally 2026 (Nov 15–21, 2026, KMITL Chumphon) presented to Thiraphat Thongsing (Team TGR-51)"
+              >
+                View Certificate
+              </button>
               <button
                 class="btn btn-secondary btn-sm"
                 type="button"
@@ -763,7 +816,7 @@
 
   <footer class="container footer">
     <span>© 2026 Thiraphat Thongsing · Embedded Systems &amp; IoT Engineering Portfolio</span>
-    <span class="mono">Built from verified lab reports, firmware source, schematics &amp; TGR-51 scorebook</span>
+    <span class="mono">Built from verified lab reports, firmware source, schematics, TGR-51 scorebook &amp; official certificate</span>
   </footer>
 
   <!-- Full-Resolution Image / Schematic Lightbox Modal -->

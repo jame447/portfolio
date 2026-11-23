@@ -18,12 +18,14 @@ window.PORTFOLIO_DATA = {
     gpa: "≥ 3.20 / 4.00",
     graduation: "Expected 2028",
     email: "tudtudtudut05@gmail.com",
+    githubUrl: "https://github.com/jame447",
     location: "Chumphon, Thailand",
     teamCode: "TGR-51 (กาแฟอยู่นี่ / Coffee-is-Here)",
     activities: "University Badminton Player / Club Member",
     resumeUrl: "assets/Resume-Thiraphat-Thongsing.pdf",
     portraitUrl: "assets/myface.jpg",
     scorePhotoUrl: "assets/score.jpg",
+    certificateUrl: "assets/certificate.jpg",
     rackPhotoUrl: "assets/rack-67200368.png"
   },
 
@@ -56,6 +58,7 @@ window.PORTFOLIO_DATA = {
 
   scorebook: {
     event: "TESA Top Gun Rally 2026 #20",
+    dates: "November 15–21, 2026",
     host: "KMITL Prince of Chumphon Campus",
     teamCode: "TGR-51",
     teamNameTh: "กาแฟอยู่นี่",
@@ -107,6 +110,34 @@ window.PORTFOLIO_DATA = {
       }
     ]
   },
+
+  certificates: [
+    {
+      id: "tesa-tgr-2026",
+      badge: "Certificate of Participation",
+      title: "The TESA Top Gun Rally 2026",
+      subtitle: "Jointly organized by Thai Embedded Systems Association (TESA) & King Mongkut's Institute of Technology Ladkrabang (School of Engineering and Prince of Chumphon Campus)",
+      recipient: "Thiraphat Thongsing",
+      teamCode: "TGR-51",
+      dates: "November 15–21, 2026",
+      location: "KMITL Prince of Chumphon Campus, Chumphon, Thailand",
+      summary:
+        "Awarded in recognition of successful participation in and completion of the national embedded systems & AIoT training camp and competition (20th TESA Top Gun Rally).",
+      signatories: [
+        { name: "Assoc.Prof. Wiroon Sriborrirux", role: "President, Thailand Embedded Systems Association" },
+        { name: "Assoc.Prof.Dr. Somyot Kaitwanidvilai", role: "Dean, School of Engineering, KMITL" },
+        { name: "Assoc.Prof.Dr. Siriwan Srisang", role: "Executive Vice President, KMITL Prince of Chumphon Campus" }
+      ],
+      highlights: [
+        "#1 Embedded Integration (52.8 / 55)",
+        "#3 Day 2 Precision Sensing (38.4 / 40)",
+        "Special Problem (2 / 2)"
+      ],
+      imageUrl: "assets/certificate.jpg",
+      caption:
+        "Official Certificate of Participation — The TESA Top Gun Rally 2026 (Nov 15–21, 2026, KMITL Prince of Chumphon) presented to Thiraphat Thongsing (Team TGR-51)"
+    }
+  ],
 
   moistureLab: {
     // Firmware v24 exact constants from esp32_coffee_moisture_meter.ino

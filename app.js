@@ -89,6 +89,110 @@
       .join("");
   }
 
+  // ---------------- Render Official Certificates ----------------
+  const certificatesContainer = el("certificatesContainer");
+  if (certificatesContainer && Array.isArray(DATA.certificates)) {
+    certificatesContainer.innerHTML = DATA.certificates
+      .map((cert) => {
+        const signatoriesHtml = cert.signatories
+          .map(
+            (sig) => `
+            <div class="signatory-item">
+              <strong>${escapeHtml(sig.name)}</strong>
+              <span>${escapeHtml(sig.role)}</span>
+            </div>`
+          )
+          .join("");
+        const highlightsHtml = cert.highlights
+          .map(
+            (h, idx) =>
+              `<span class="badge ${idx === 0 ? "badge-emerald" : idx === 1 ? "badge-cyan" : "badge-amber"}">${escapeHtml(h)}</span>`
+          )
+          .join("");
+        return `
+          <article class="certificate-card">
+            <div class="certificate-grid">
+              <div
+                class="certificate-frame"
+                role="button"
+                tabindex="0"
+                data-lightbox="${escapeHtml(cert.imageUrl)}"
+                data-caption="${escapeHtml(cert.caption)}"
+                title="Click to inspect full-resolution certificate"
+              >
+                <img
+                  src="${escapeHtml(cert.imageUrl)}"
+                  alt="${escapeHtml(cert.title)} — ${escapeHtml(cert.recipient)} (${escapeHtml(cert.teamCode)})"
+                />
+                <div class="certificate-overlay">
+                  <span>TESA · KMITL · ${escapeHtml(cert.teamCode)}</span>
+                  <span class="badge badge-amber">Zoom Full Resolution ⤢</span>
+                </div>
+              </div>
+
+              <div class="certificate-details">
+                <div style="display: flex; flex-wrap: wrap; gap: 0.45rem;">
+                  <span class="badge badge-amber">${escapeHtml(cert.badge)}</span>
+                  <span class="badge badge-cyan">Team ${escapeHtml(cert.teamCode)}</span>
+                  <span class="badge badge-emerald">Verified Signed Original</span>
+                </div>
+
+                <div>
+                  <h3>${escapeHtml(cert.title)}</h3>
+                  <p class="certificate-subtitle" style="margin-top: 0.35rem;">${escapeHtml(cert.subtitle)}</p>
+                </div>
+
+                <p style="margin: 0; font-size: 0.9rem; color: var(--text-muted);">${escapeHtml(cert.summary)}</p>
+
+                <div class="cert-meta-grid">
+                  <div class="cert-meta-item">
+                    <small>Recipient</small>
+                    <strong>${escapeHtml(cert.recipient)}</strong>
+                  </div>
+                  <div class="cert-meta-item">
+                    <small>Camp &amp; Rally Dates</small>
+                    <strong>${escapeHtml(cert.dates)}</strong>
+                  </div>
+                  <div class="cert-meta-item" style="grid-column: 1 / -1;">
+                    <small>Host Venue</small>
+                    <strong>${escapeHtml(cert.location)}</strong>
+                  </div>
+                </div>
+
+                <div class="signatory-list">
+                  <div class="signatory-list-title">Signed &amp; Endorsed By</div>
+                  ${signatoriesHtml}
+                </div>
+
+                <div style="display: flex; flex-wrap: wrap; gap: 0.45rem;">
+                  ${highlightsHtml}
+                </div>
+
+                <div style="display: flex; flex-wrap: wrap; gap: 0.6rem; margin-top: 0.15rem;">
+                  <button
+                    class="btn btn-primary btn-sm"
+                    type="button"
+                    data-lightbox="${escapeHtml(cert.imageUrl)}"
+                    data-caption="${escapeHtml(cert.caption)}"
+                  >
+                    Zoom Full Certificate ⤢
+                  </button>
+                  <a
+                    class="btn btn-secondary btn-sm"
+                    href="${escapeHtml(cert.imageUrl)}"
+                    target="_blank"
+                    rel="noopener"
+                  >
+                    Open Original Image ↗
+                  </a>
+                </div>
+              </div>
+            </div>
+          </article>`;
+      })
+      .join("");
+  }
+
   // ---------------- Project Tabs ----------------
   document.querySelectorAll(".tab-bar[data-tab-group]").forEach((bar) => {
     const buttons = bar.querySelectorAll(".tab-btn[data-tab]");
