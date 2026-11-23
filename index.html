@@ -1,0 +1,783 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Thiraphat Thongsing — Embedded Systems &amp; IoT Engineering Portfolio</title>
+  <meta
+    name="description"
+    content="Embedded Systems &amp; IoT Engineering Portfolio of Thiraphat Thongsing (KMITL). #1 Integration &amp; #3 Day 2 Precision Sensing at TESA Top Gun Rally 2026, custom 2-layer EasyEDA PCBs, ESP32/Arduino C/C++, FPGA, and Edge-to-Cloud telemetry."
+  />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700&family=Noto+Sans+Thai:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@600;700&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Sticky Navigation Bar -->
+  <header class="navbar">
+    <div class="container navbar-inner">
+      <a class="brand" href="#top">
+        <span class="brand-mark">TGR51</span>
+        <span class="brand-meta">
+          <span>Thiraphat Thongsing</span>
+          <small>Embedded &amp; IoT · KMITL 67200368</small>
+        </span>
+      </a>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#scorebook">Scorebook</a></li>
+        <li><a href="#projects">Systems</a></li>
+        <li><a href="#moisture-lab">Firmware Sim</a></li>
+        <li><a href="#skills">Stack</a></li>
+        <li><a href="#labs">Engineering Labs</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <a class="btn btn-secondary btn-sm" href="assets/Resume-Thiraphat-Thongsing.pdf" target="_blank" rel="noopener">
+          Resume PDF
+        </a>
+        <button class="mobile-menu-btn" id="mobileMenuBtn" type="button" aria-label="Toggle Menu">
+          ☰
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="top">
+    <!-- ==================== HERO SECTION ==================== -->
+    <section class="hero">
+      <div class="container">
+        <div class="hero-grid">
+          <div>
+            <div class="hero-badges">
+              <span class="badge badge-emerald">
+                <span class="pulse-dot"></span>
+                Available for Embedded &amp; IoT Internship
+              </span>
+              <span class="badge badge-cyan">TESA Top Gun Rally 2026 · #1 Integration</span>
+              <span class="badge badge-amber">GPA ≥ 3.20 / 4.00</span>
+            </div>
+
+            <h1 class="hero-title">
+              Deterministic <span class="accent">Hardware–Firmware</span> Co-Design for Real-Time IoT
+            </h1>
+            <p class="hero-subtitle">
+              Thiraphat Thongsing (ธีรภัทร ทองสิงห์) — Year 3 Computer Engineering, KMITL Prince of Chumphon
+            </p>
+            <p class="hero-desc">
+              I engineer bare-metal ESP32 &amp; Arduino firmware, analog/capacitive comparator front-ends,
+              custom 2-layer EasyEDA PCBs, and resilient MQTT/ESP-NOW telemetry pipelines. Placed
+              <strong>#1 in Embedded Integration (52.8/55)</strong> and <strong>#3 in Day 2 Sensing (38.4/40)</strong>
+              at TESA Top Gun Rally 2026.
+            </p>
+
+            <div class="hero-cta">
+              <a class="btn btn-primary" href="#projects">Inspect Flagship Systems</a>
+              <a class="btn btn-secondary" href="#moisture-lab">Launch Live Firmware Sim</a>
+              <a class="btn btn-secondary" href="assets/Resume-Thiraphat-Thongsing.pdf" target="_blank" rel="noopener">
+                Open Resume (PDF)
+              </a>
+            </div>
+
+            <div class="hero-meta-line">
+              <span>MCU: ESP32 / ESP32-CAM / Uno R3</span>
+              <span>EDA: EasyEDA 2-Layer · Quartus FPGA</span>
+              <span>Protocols: SPI · I2C · ESP-NOW · NRF24 · MQTT</span>
+            </div>
+          </div>
+
+          <!-- Engineer Profile Card with myface.jpg -->
+          <aside class="engineer-card" aria-label="Engineer Profile Card">
+            <div class="engineer-card-head">
+              <span>ENGINEER CREDENTIAL // TGR-51</span>
+              <span class="badge badge-cyan">ID 67200368</span>
+            </div>
+
+            <div
+              class="portrait-frame"
+              role="button"
+              tabindex="0"
+              data-lightbox="assets/myface.jpg"
+              data-caption="Thiraphat Thongsing — Team TGR-51 Embedded Lead, TESA Top Gun Rally 2026 #20 (KMITL Chumphon)"
+            >
+              <img
+                src="assets/myface.jpg"
+                alt="Thiraphat Thongsing wearing 20th Anniversary TESA Top Gun Rally shirt and lanyard"
+              />
+              <div class="portrait-caption">
+                <div>
+                  <strong>Thiraphat Thongsing</strong>
+                  <span>Embedded Hardware &amp; Firmware Lead</span>
+                </div>
+                <span class="badge">Zoom ⤢</span>
+              </div>
+            </div>
+
+            <div class="engineer-specs">
+              <div class="spec-chip">
+                <small>Track 1 Timing</small>
+                <strong>240 MHz CCOUNT</strong>
+              </div>
+              <div class="spec-chip">
+                <small>Resolution</small>
+                <strong>4.17 ns (~0.004 pF)</strong>
+              </div>
+              <div class="spec-chip">
+                <small>PCB / CAD</small>
+                <strong>EasyEDA · SolidWorks</strong>
+              </div>
+              <div class="spec-chip">
+                <small>Location</small>
+                <strong>Chumphon, TH</strong>
+              </div>
+            </div>
+          </aside>
+        </div>
+
+        <!-- 4-Card Telemetry KPI Strip -->
+        <div class="kpi-strip" id="heroKpis"></div>
+      </div>
+    </section>
+
+    <!-- ==================== SCOREBOOK PROOF SECTION (score.jpg) ==================== -->
+    <section class="section" id="scorebook">
+      <div class="container">
+        <div class="section-header">
+          <div>
+            <div class="eyebrow">Competition Proof · Nov 2026</div>
+            <h2 class="section-title">TESA Top Gun Rally 2026 #20 Official Scorebook</h2>
+            <p class="section-sub">
+              Official team scorecard from <code>tesa-score.c333m.site</code> for Team <strong>TGR-51 (กาแฟอยู่นี่ / Coffee-is-Here)</strong>,
+              highlighting Track 1 Embedded Integration <strong>#1 nationally (52.8/55)</strong> and Day 2 Precision Sensing <strong>#3 (38.4/40)</strong>.
+            </p>
+          </div>
+          <button
+            class="btn btn-secondary btn-sm"
+            type="button"
+            data-lightbox="assets/score.jpg"
+            data-caption="Official TESA Top Gun Rally 2026 Scorebook — Team TGR-51 (79.53/100 Total, #1 Embedded Integration, #3 Day 2)"
+          >
+            Inspect Full Score Photo ⤢
+          </button>
+        </div>
+
+        <div class="scorebook-grid">
+          <div class="panel">
+            <div class="score-summary-bar">
+              <div>
+                <div class="eyebrow" style="margin-bottom: 0.25rem;">Team TGR-51 · KMITL</div>
+                <div class="score-total-big">79.53 <span>/ 100 Total</span></div>
+              </div>
+              <div style="display: flex; flex-wrap: wrap; gap: 0.5rem;">
+                <span class="badge badge-emerald">#1 Embedded Integration · 52.8/55</span>
+                <span class="badge badge-cyan">#3 Embedded Day 2 · 38.4/40</span>
+                <span class="badge badge-amber">Special Problem · 2/2</span>
+              </div>
+            </div>
+
+            <div class="tracks-list" id="scoreTracksContainer"></div>
+          </div>
+
+          <aside class="scorebook-photo-card">
+            <div style="display: flex; justify-content: space-between; align-items: center;">
+              <strong style="font-family: var(--font-display); font-size: 0.96rem;">Verified Screenshot (`score.jpg`)</strong>
+              <span class="badge badge-emerald">Scroll / Click Zoom</span>
+            </div>
+            <div
+              class="scorebook-viewport"
+              role="button"
+              tabindex="0"
+              data-lightbox="assets/score.jpg"
+              data-caption="Official TESA Top Gun Rally 2026 Team Scorebook — Team TGR-51 (กาแฟอยู่นี่)"
+              title="Click to inspect full-resolution scorebook photo"
+            >
+              <img
+                src="assets/score.jpg"
+                alt="Official TESA Top Gun Rally 2026 Team TGR-51 Scorebook showing 79.53/100 total, #1 Embedded Integration 52.8/55, and #3 Day 2 38.4/40"
+              />
+            </div>
+            <small class="mono" style="color: var(--text-muted); font-size: 0.76rem;">
+              Source: tesa-score.c333m.site · Scroll inside frame or click to open full-scale lightbox.
+            </small>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== FLAGSHIP EMBEDDED PROJECTS ==================== -->
+    <section class="section" id="projects">
+      <div class="container">
+        <div class="section-header">
+          <div>
+            <div class="eyebrow">Hardware · Firmware · Telemetry</div>
+            <h2 class="section-title">Flagship Embedded Engineering Systems</h2>
+            <p class="section-sub">
+              End-to-end engineering dossiers with live firmware simulators, authentic schematics, custom PCB layouts,
+              and quantified bench &amp; competition verification results.
+            </p>
+          </div>
+        </div>
+
+        <!-- ============ PROJECT 01: CAPACITIVE COFFEE MOISTURE ANALYZER ============ -->
+        <article class="project-card" id="moisture-lab">
+          <div class="project-header">
+            <div>
+              <div class="project-index">System 01 · TESA Top Gun Rally 2026 (Team TGR-51)</div>
+              <h3 class="project-title">Precision Capacitive Coffee Moisture Analyzer &amp; Seam Hub Telemetry</h3>
+              <div class="project-role">
+                Role: <strong>Embedded Hardware &amp; Firmware Lead (Track 1)</strong> · Nov 2026 · Placed #1 Integration &amp; #3 Day 2
+              </div>
+            </div>
+            <div class="project-tags">
+              <span class="badge badge-emerald">52.8/55 Integration (#1)</span>
+              <span class="badge badge-cyan">ESP32 · LM393 · 4.17 ns</span>
+              <span class="badge">PWL / OLS / Quad · NVS</span>
+              <span class="badge">MQTT · FastAPI Seam Hub</span>
+            </div>
+          </div>
+
+          <div class="tab-bar" data-tab-group="proj1">
+            <button class="tab-btn active" type="button" data-tab="p1-sim">Interactive Firmware &amp; Calibration Lab</button>
+            <button class="tab-btn" type="button" data-tab="p1-arch">Signal DSP &amp; Pinout</button>
+            <button class="tab-btn" type="button" data-tab="p1-sch">Real LM393 Schematics</button>
+            <button class="tab-btn" type="button" data-tab="p1-bench">Benchmarks vs mini GAC</button>
+          </div>
+
+          <!-- P1 Tab 1: Interactive Simulator -->
+          <div class="tab-pane active" id="p1-sim">
+            <div class="two-col">
+              <div class="subcard">
+                <h4>
+                  <span>ESP32 v24 Moisture Engine + Seam Hub TV Simulator</span>
+                  <span class="badge badge-cyan">Live Math Sync</span>
+                </h4>
+                <div class="sim-controls">
+                  <div class="preset-row" id="moisturePresets"></div>
+
+                  <div class="control-group">
+                    <label for="capSlider">
+                      <span>Measured Box Capacitance (<code>C_total</code>)</span>
+                      <span class="mono" style="color: var(--cyan);" id="capSliderVal">25.79 pF</span>
+                    </label>
+                    <input id="capSlider" type="range" min="10.0" max="32.5" step="0.01" value="25.79" />
+                  </div>
+
+                  <div class="control-group">
+                    <label>
+                      <span>Regression Model (<code>MODE</code>)</span>
+                      <span class="mono" style="color: var(--amber);" id="modelEqLabel">PWL 3-Point</span>
+                    </label>
+                    <div class="preset-row" id="fitModelBtns">
+                      <button class="preset-btn active" type="button" data-model="PWL">PWL (Default)</button>
+                      <button class="preset-btn" type="button" data-model="LIN">OLS Linear</button>
+                      <button class="preset-btn" type="button" data-model="QUAD">Lagrange Quad</button>
+                    </div>
+                  </div>
+
+                  <div class="control-group">
+                    <label for="defectSlider">
+                      <span>Seam Hub Vision Input: Defect % (Track 2 RPi 5) &amp; Screen Mesh</span>
+                      <span class="mono" style="color: var(--emerald);" id="defectSliderVal">2.0% · #16</span>
+                    </label>
+                    <div style="display: grid; grid-template-columns: 1fr auto; gap: 0.75rem; align-items: center;">
+                      <input id="defectSlider" type="range" min="0" max="16" step="0.1" value="2.0" />
+                      <select id="screenSelect" aria-label="Screen Mesh Size" style="background: var(--surface); color: var(--text); border: 1px solid var(--border); border-radius: 8px; padding: 0.35rem 0.6rem; font-family: var(--font-mono); font-size: 0.82rem;">
+                        <option value="12">Screen #12</option>
+                        <option value="13">Screen #13</option>
+                        <option value="14">Screen #14</option>
+                        <option value="15">Screen #15</option>
+                        <option value="16" selected>Screen #16</option>
+                        <option value="17">Screen #17</option>
+                        <option value="18">Screen #18</option>
+                      </select>
+                    </div>
+                  </div>
+
+                  <div class="sim-readout-grid">
+                    <div class="readout-box">
+                      <small>Moisture Output</small>
+                      <strong id="simMoistureOut">11.30 %</strong>
+                    </div>
+                    <div class="readout-box">
+                      <small>Charge Time (CCOUNT)</small>
+                      <strong id="simTimeNsOut" style="font-size: 0.98rem;">26,392 ns</strong>
+                    </div>
+                    <div class="readout-box">
+                      <small>Seam Hub True Value</small>
+                      <strong id="simTvOut" style="color: var(--emerald);">128.54 ฿/kg</strong>
+                    </div>
+                  </div>
+
+                  <div class="terminal-box" id="moistureTerminal" aria-live="polite"></div>
+                </div>
+              </div>
+
+              <div class="subcard">
+                <h4>
+                  <span>v24 Calibration Curve (<code>C_total</code> pF vs Moisture %)</span>
+                  <span class="badge" id="seamGradeBadge">GRADE_1 · M=1.00</span>
+                </h4>
+                <div class="chart-frame">
+                  <svg id="calCurveSvg" viewBox="0 0 460 280" width="100%" aria-label="Capacitance vs Moisture calibration curve"></svg>
+                </div>
+                <ul class="bullet-list" style="margin-top: 0.9rem;">
+                  <li><strong>C₀ Parasitic Subtraction:</strong> Empty 3-slot <code>5×10 cm</code> PCB box baseline <code>10.72 pF</code> with <code>2.20 pF</code> deadband (<code>≤ 12.92 pF → 0.00%</code>).</li>
+                  <li><strong>50 Hz Hum Cancellation:</strong> <code>24</code> dipole warm-up cycles + <code>384</code> measurement cycles (<code>~160 ms = 8 full 50 Hz mains cycles</code>), 40% center trimmed-mean + 50/50 median filter.</li>
+                  <li><strong>Integration Seam Hub:</strong> Moisture fuses with RPi 5 Edge AI defects via <code>TV = 120 × G(d) × M(m) × S(s)</code> (moisture penalty triggers above <code>12.5%</code>, cliff <code>0.60×</code> above <code>15.0%</code>).</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- P1 Tab 2: Architecture & Pinout -->
+          <div class="tab-pane" id="p1-arch">
+            <div class="two-col">
+              <div class="subcard">
+                <h4>Hardware Constraints &amp; Firmware DSP Architecture</h4>
+                <ul class="bullet-list">
+                  <li><strong>Strict Competition Hardware:</strong> ESP32 DevKit V1, LM393 DIP-8 Dual Voltage Comparator, single <code>1 MΩ</code> RC charging resistor (measured <code>1.027 MΩ</code>), <code>10 kΩ</code> trimpot setting <code>Vref ≈ 1.65 V</code> (inside LM393 <code>0..VCC-1.5V</code> input common-mode window), <code>10 kΩ / 2 kΩ</code> open-collector pull-up, and <code>0.1 µF</code> switch hardware debounce.</li>
+                  <li><strong>Inverting Comparator Trick:</strong> Wiring <code>Vc → IN1-</code> and <code>Vref → IN1+</code> forces LM393's open-collector transistor to pull <code>OUT1</code> <code>HIGH → LOW</code> in nanoseconds, avoiding slow pull-up slew-rate sensitivity to cable stray capacitance.</li>
+                  <li><strong>Cycle-Accurate Critical Section:</strong> <code>IRAM_ATTR</code> routine under <code>portENTER_CRITICAL(&amp;timingMux)</code> uses single-cycle register macros (<code>GPIO_OUT_W1TS_REG</code>, <code>GPIO_IN_REG</code>) and inline assembly <code>rsr %0, ccount</code> at 240 MHz for <strong>4.17 ns/cycle</strong> resolution (~<code>0.004 pF</code>).</li>
+                  <li><strong>Pre-Rally IoT Prototyping:</strong> Initial telemetry built on NE555P (<code>508.01 kHz</code> baseline via hardware <code>PCNT</code> on <code>GPIO 4</code>), <code>GPIO 34 ADC1</code> divider + <code>25 kHz PWM</code> drying fan (<code>GPIO 18</code>), and Mosquitto MQTT JSON publishing (<code>chumphon/coffee/sensor</code>).</li>
+                </ul>
+              </div>
+
+              <div class="subcard">
+                <h4>ESP32 &amp; LM393 Pin Allocation Table</h4>
+                <div class="table-wrap">
+                  <table>
+                    <thead>
+                      <tr>
+                        <th>Signal</th>
+                        <th>ESP32 Pin</th>
+                        <th>Hardware Function</th>
+                      </tr>
+                    </thead>
+                    <tbody id="moisturePinoutBody"></tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- P1 Tab 3: Real SVG Schematics -->
+          <div class="tab-pane" id="p1-sch">
+            <div class="two-col">
+              <div class="subcard">
+                <h4>
+                  <span>Day 2: Coffee Moisture Sensor Box Schematic</span>
+                  <span class="badge badge-cyan">3-Slot 5×10 cm PCB</span>
+                </h4>
+                <div
+                  class="schematic-frame"
+                  role="button"
+                  tabindex="0"
+                  data-lightbox="assets/lm393_coffee_moisture_schematic.svg"
+                  data-caption="Day 2 Schematic: ESP32 + LM393 Inverting Comparator + 3-Slot 5x10 cm Copper PCB Capacitive Coffee Sensor Box"
+                >
+                  <img
+                    src="assets/lm393_coffee_moisture_schematic.svg"
+                    alt="ESP32 and LM393 Coffee Bean Moisture Sensor Schematic"
+                  />
+                </div>
+                <p style="margin: 0.7rem 0 0; font-size: 0.84rem; color: var(--text-muted);">
+                  Supports both 2-plate and 3-plate shielded parallel-plate box wiring (<code>J1.1 Vc</code> center, outer plates to <code>GND</code>). Click diagram to zoom.
+                </p>
+              </div>
+
+              <div class="subcard">
+                <h4>
+                  <span>Day 1: Picofarad Capacitance Meter Schematic</span>
+                  <span class="badge badge-amber">R² = 0.999050 vs LCR</span>
+                </h4>
+                <div
+                  class="schematic-frame"
+                  role="button"
+                  tabindex="0"
+                  data-lightbox="assets/lm393_cap_comparator_schematic.svg"
+                  data-caption="Day 1 Schematic: ESP32 + LM393 Picofarad Capacitance Meter (5-20 pF DUT Socket J1)"
+                >
+                  <img
+                    src="assets/lm393_cap_comparator_schematic.svg"
+                    alt="ESP32 and LM393 Picofarad Capacitance Meter Schematic"
+                  />
+                </div>
+                <p style="margin: 0.7rem 0 0; font-size: 0.84rem; color: var(--text-muted);">
+                  Same core breadboard circuit with 2-pin DUT socket <code>J1</code> and unused channel <code>U1B</code> terminated to prevent oscillation. Click diagram to zoom.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- P1 Tab 4: Empirical Benchmarks -->
+          <div class="tab-pane" id="p1-bench">
+            <div class="subcard" style="margin-bottom: 1.15rem;">
+              <h4>Day 2 Repeatability &amp; Accuracy vs DICKEY-john mini GAC (<code>moisture_test_summary_v18.html</code>, Raw Un-Locked Hardware Filter)</h4>
+              <div class="table-wrap">
+                <table>
+                  <thead>
+                    <tr>
+                      <th>Sample</th>
+                      <th>mini GAC Ref</th>
+                      <th>5 Consecutive ESP32 Readings (%)</th>
+                      <th>Mean (%)</th>
+                      <th>SD Jitter</th>
+                      <th>Rel %Error</th>
+                      <th>Rel %RMSE</th>
+                      <th>Rule 5.2 Score</th>
+                    </tr>
+                  </thead>
+                  <tbody id="v18TableBody"></tbody>
+                </table>
+              </div>
+              <p style="margin: 0.75rem 0 0; font-size: 0.85rem; color: var(--text-muted);">
+                <strong>Key Result:</strong> Commercial DICKEY-john mini GAC repeatability spec is <code>±0.20%</code>; ESP32 v18 achieved <code>±0.018%–±0.073%</code> raw jitter (3–10× steadier), while v24 full-box test logs (<code>last test v24.txt</code>) hit <strong>0.00 ns std dev</strong> across 5 repeated presses at <code>~153–160 ms</code> acquisition time.
+              </p>
+            </div>
+
+            <div class="subcard">
+              <h4>Day 1 Picofarad Calibration vs Official Competition LCR Meter (<code>Capa/c *.txt</code>)</h4>
+              <div class="table-wrap">
+                <table>
+                  <thead>
+                    <tr>
+                      <th>Nominal Capacitor</th>
+                      <th>Competition LCR Reference (Cp)</th>
+                      <th>ESP32 Pre-Cal Readings</th>
+                      <th>ESP32 Post-PWL Cal Readings</th>
+                    </tr>
+                  </thead>
+                  <tbody id="day1TableBody"></tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- ============ PROJECT 02: SMART RFID DOOR LOCK & CCTV ============ -->
+        <article class="project-card" id="proj-doorlock">
+          <div class="project-header">
+            <div>
+              <div class="project-index">System 02 · Information &amp; Computer Security · Sep 2026</div>
+              <h3 class="project-title">IoT Smart RFID Door Lock &amp; CCTV Access Control System</h3>
+              <div class="project-role">
+                Role: <strong>Hardware &amp; PCB Design Lead</strong> · Dual-MCU Wireless Architecture · 99.62% Verified Pass Rate
+              </div>
+            </div>
+            <div class="project-tags">
+              <span class="badge badge-emerald">1,295 / 1,300 Trials (99.62%)</span>
+              <span class="badge badge-cyan">DOIT ESP32 + ESP32-CAM</span>
+              <span class="badge">EasyEDA 2-Layer PCB</span>
+              <span class="badge">VSPI / HSPI · ESP-NOW</span>
+            </div>
+          </div>
+
+          <div class="tab-bar" data-tab-group="proj2">
+            <button class="tab-btn active" type="button" data-tab="p2-arch">Hardware, PCB &amp; Non-Blocking Flow</button>
+            <button class="tab-btn" type="button" data-tab="p2-trials">13-Scenario Test Matrix (1,300 Trials)</button>
+            <button class="tab-btn" type="button" data-tab="p2-diag">System Block Topology</button>
+          </div>
+
+          <div class="tab-pane active" id="p2-arch">
+            <div class="two-col">
+              <div class="subcard">
+                <h4>Dual-MCU &amp; Dual-SPI Hardware Engineering</h4>
+                <ul class="bullet-list">
+                  <li><strong>Dual-SPI Bus Isolation:</strong> Wired concurrent MFRC522 readers on separate hardware buses — <strong>VSPI</strong> (Entry, gated by <code>HY-SRF05 ≤ 30–45 cm</code>) and <strong>HSPI</strong> (Exit, independent of ultrasonic proximity) so ingress and egress never collide.</li>
+                  <li><strong>Wake-on-Approach via ESP-NOW:</strong> Main ESP32 transmits <code>nearby 1/0</code> state over peer-to-peer ESP-NOW to <strong>ESP32-CAM</strong>, sleeping camera capture when idle (5 s away hysteresis + 300 ms debounce) and waking <code>:81/stream</code> MJPEG live CCTV + <code>:80/capture</code> JPEG snapshots on entry.</li>
+                  <li><strong>Custom 2-Layer EasyEDA PCB &amp; Flyback Protection:</strong> Routed custom carrier PCB (dated <code>2026-09-15</code>) with JST B2B/B4B/B7B headers, <code>1 kΩ / 2 kΩ</code> Echo voltage divider protecting 3.3 V GPIO from 5 V HY-SRF05 Echo, <code>470 µF + 100 nF</code> rail decoupling, and <strong>1N4007 flyback diode</strong> across the <strong>12V / 0.6A LY-03</strong> solenoid lock driven via relay (<code>HIGH ≈ 5.2 s</code>).</li>
+                  <li><strong>3D-Printed Dual-Unit Wall Enclosure:</strong> Modeled main controller housing (OLED, ultrasonic, buzzer speaker holes) + separate exterior exit RFID housing + camera mount.</li>
+                </ul>
+              </div>
+
+              <div class="subcard">
+                <h4>Security &amp; Async Cloud Architecture</h4>
+                <ul class="bullet-list">
+                  <li><strong>Zero-Wait Unlock Latency:</strong> ESP32 sends authenticated JSON (<code>POST /access</code> with Bearer <code>DEVICE_TOKEN</code>, 5 s timeout) to <strong>NestJS + MySQL + Prisma</strong>. Backend returns <code>granted / denied</code> immediately while fetching <code>GET /capture :80</code> asynchronously in the background — ensuring slow camera frames never delay door release.</li>
+                  <li><strong>Full RBAC Schema:</strong> 5-table relational design (<code>InviteCode</code>, <code>Admin [ADMIN | GUARD]</code> with scrypt password hashing, <code>User</code> RFID UIDs, <code>AccessLog</code>, and retry-queued <code>LineNotification</code>).</li>
+                  <li><strong>Live Security Operations:</strong> Next.js Admin &amp; Guard dashboards stream real-time <code>Socket.IO</code> events, access history thumbnails, and conditional LINE Messaging API + email alerts.</li>
+                  <li><strong>Engineering Post-Mortem:</strong> Documented PCB copper pour improvements, inductive transient suppression, and future roadmap (offline cache, anti-cloning 2FA, TLS &amp; rate limiting).</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="tab-pane" id="p2-trials">
+            <div class="subcard">
+              <h4>
+                <span>Verified Experimental Matrix — 13 Scenarios × 100 Trials = 1,300 Runs</span>
+                <span class="badge badge-emerald">11/13 Scenarios at 100%</span>
+              </h4>
+              <div class="preset-row" id="trialFilterBtns" style="margin-bottom: 1rem;">
+                <button class="preset-btn active" type="button" data-trial-filter="all">All 13 Scenarios (99.62%)</button>
+                <button class="preset-btn" type="button" data-trial-filter="100">100% Pass (11)</button>
+                <button class="preset-btn" type="button" data-trial-filter="edge">Edge Drops (T01, T12)</button>
+              </div>
+              <div class="trial-grid" id="trialGrid"></div>
+            </div>
+          </div>
+
+          <div class="tab-pane" id="p2-diag">
+            <div class="subcard">
+              <h4>Dual-Bus Hardware &amp; Async Verification Topology</h4>
+              <div class="chart-frame">
+                <svg viewBox="0 0 920 320" width="100%" aria-label="Smart RFID Door Lock Dual-MCU System Architecture">
+                  <defs>
+                    <marker id="arrowCyan" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+                      <path d="M 0 1 L 10 5 L 0 9 z" fill="#22d3ee" />
+                    </marker>
+                    <marker id="arrowAmber" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+                      <path d="M 0 1 L 10 5 L 0 9 z" fill="#f59e0b" />
+                    </marker>
+                  </defs>
+                  <!-- Inputs -->
+                  <rect x="20" y="24" width="195" height="58" rx="10" fill="#121a26" stroke="#22d3ee" stroke-width="1.5" />
+                  <text x="34" y="48" fill="#eef2f7" font-size="13" font-weight="700" font-family="Space Grotesk, sans-serif">RFID Reader IN (RC522)</text>
+                  <text x="34" y="67" fill="#22d3ee" font-size="11" font-family="JetBrains Mono, monospace">VSPI · Gated by Ultrasonic</text>
+
+                  <rect x="20" y="102" width="195" height="58" rx="10" fill="#121a26" stroke="#22d3ee" stroke-width="1.5" />
+                  <text x="34" y="126" fill="#eef2f7" font-size="13" font-weight="700" font-family="Space Grotesk, sans-serif">RFID Reader OUT (RC522)</text>
+                  <text x="34" y="145" fill="#22d3ee" font-size="11" font-family="JetBrains Mono, monospace">HSPI · Always Ready Exit</text>
+
+                  <rect x="20" y="180" width="195" height="58" rx="10" fill="#121a26" stroke="#f59e0b" stroke-width="1.5" />
+                  <text x="34" y="204" fill="#eef2f7" font-size="13" font-weight="700" font-family="Space Grotesk, sans-serif">HY-SRF05 Ultrasonic</text>
+                  <text x="34" y="223" fill="#f59e0b" font-size="11" font-family="JetBrains Mono, monospace">≤ 30–45 cm · 1k/2k Divider</text>
+
+                  <!-- ESP32 Main -->
+                  <rect x="285" y="64" width="220" height="140" rx="14" fill="#182232" stroke="#10b981" stroke-width="2" />
+                  <text x="305" y="94" fill="#10b981" font-size="12" font-family="JetBrains Mono, monospace">CUSTOM 2-LAYER PCB</text>
+                  <text x="305" y="118" fill="#eef2f7" font-size="16" font-weight="700" font-family="Space Grotesk, sans-serif">DOIT ESP32 Main</text>
+                  <text x="305" y="142" fill="#9aa7b8" font-size="11.5" font-family="JetBrains Mono, monospace">SH1106 I2C OLED · Buzzer</text>
+                  <text x="305" y="162" fill="#9aa7b8" font-size="11.5" font-family="JetBrains Mono, monospace">1N4007 Flyback Relay (~5.2s)</text>
+                  <text x="305" y="182" fill="#10b981" font-size="11.5" font-family="JetBrains Mono, monospace">-> LY-03 12V/0.6A Solenoid</text>
+
+                  <!-- ESP32-CAM -->
+                  <rect x="285" y="236" width="220" height="66" rx="12" fill="#121a26" stroke="#f59e0b" stroke-width="1.5" />
+                  <text x="305" y="262" fill="#eef2f7" font-size="14" font-weight="700" font-family="Space Grotesk, sans-serif">ESP32-CAM Node</text>
+                  <text x="305" y="282" fill="#f59e0b" font-size="11" font-family="JetBrains Mono, monospace">JPEG :80/capture · MJPEG :81</text>
+
+                  <!-- NestJS Backend & Clients -->
+                  <rect x="580" y="34" width="315" height="110" rx="14" fill="#121a26" stroke="#22d3ee" stroke-width="1.8" />
+                  <text x="600" y="62" fill="#eef2f7" font-size="15" font-weight="700" font-family="Space Grotesk, sans-serif">NestJS Backend + MySQL / Prisma</text>
+                  <text x="600" y="84" fill="#9aa7b8" font-size="11.5" font-family="JetBrains Mono, monospace">POST /access -> Immediate granted/denied</text>
+                  <text x="600" y="104" fill="#9aa7b8" font-size="11.5" font-family="JetBrains Mono, monospace">Async GET /capture :80 (Entry Snapshot)</text>
+                  <text x="600" y="124" fill="#10b981" font-size="11.5" font-family="JetBrains Mono, monospace">Bearer DEVICE_TOKEN · scrypt RBAC</text>
+
+                  <rect x="580" y="176" width="315" height="114" rx="14" fill="#121a26" stroke="#10b981" stroke-width="1.5" />
+                  <text x="600" y="204" fill="#eef2f7" font-size="15" font-weight="700" font-family="Space Grotesk, sans-serif">Next.js Guard/Admin + LINE API</text>
+                  <text x="600" y="226" fill="#9aa7b8" font-size="11.5" font-family="JetBrains Mono, monospace">Socket.IO Live Access Stream &amp; CCTV</text>
+                  <text x="600" y="246" fill="#9aa7b8" font-size="11.5" font-family="JetBrains Mono, monospace">LINE Messaging Bot &amp; Email Alerts</text>
+                  <text x="600" y="266" fill="#22d3ee" font-size="11.5" font-family="JetBrains Mono, monospace">99.62% Pass Across 1,300 Trials</text>
+
+                  <!-- Wires -->
+                  <line x1="215" y1="53" x2="282" y2="105" stroke="#22d3ee" stroke-width="1.8" marker-end="url(#arrowCyan)" />
+                  <line x1="215" y1="131" x2="282" y2="131" stroke="#22d3ee" stroke-width="1.8" marker-end="url(#arrowCyan)" />
+                  <line x1="215" y1="209" x2="282" y2="162" stroke="#f59e0b" stroke-width="1.8" marker-end="url(#arrowAmber)" />
+                  <line x1="395" y1="204" x2="395" y2="233" stroke="#f59e0b" stroke-width="1.8" marker-end="url(#arrowAmber)" />
+                  <text x="404" y="224" fill="#f59e0b" font-size="10.5" font-family="JetBrains Mono, monospace">ESP-NOW nearby 1/0</text>
+                  <line x1="505" y1="114" x2="576" y2="85" stroke="#22d3ee" stroke-width="1.8" marker-end="url(#arrowCyan)" />
+                  <line x1="505" y1="268" x2="640" y2="148" stroke="#f59e0b" stroke-width="1.6" stroke-dasharray="5 4" marker-end="url(#arrowAmber)" />
+                  <line x1="735" y1="144" x2="735" y2="172" stroke="#22d3ee" stroke-width="1.8" marker-end="url(#arrowCyan)" />
+                </svg>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- ============ PROJECT 03: WIRELESS 2.4 GHz ALARM NODE ============ -->
+        <article class="project-card" id="proj-alarm">
+          <div class="project-header">
+            <div>
+              <div class="project-index">System 03 · Data Communication Course Project · Group CE04</div>
+              <h3 class="project-title">Wireless 2.4 GHz IoT Alarm Node &amp; Alert Subsystem</h3>
+              <div class="project-role">
+                Role: <strong>Embedded Software Developer</strong> · Arduino Uno R3 · NRF24L01 Ch.66 · SolidWorks 2023 Enclosure
+              </div>
+            </div>
+            <div class="project-tags">
+              <span class="badge badge-cyan">Arduino Uno R3</span>
+              <span class="badge badge-amber">NRF24L01 · Ch.66 "CE05"</span>
+              <span class="badge">16×2 I2C LCD (0x27)</span>
+              <span class="badge">SolidWorks + 3D Print</span>
+            </div>
+          </div>
+
+          <div class="two-col">
+            <div class="subcard">
+              <h4>RF Firmware &amp; 6-Node IoT Pipeline</h4>
+              <ul class="bullet-list">
+                <li><strong>Structured RF Packet Parser:</strong> Receives 2.4 GHz SPI frames via <code>nRF24L01p</code> (<code>CSN=7, CE=8</code>, Channel <code>66</code>, address <code>"CE05"</code>) and validates <code>"AL,&lt;node&gt;,&lt;text&gt;,&lt;cmd&gt;"</code> payloads while discarding non-protocol frames.</li>
+                <li><strong>Edge-Triggered Button State Machine:</strong> Monitors tactile input on <code>Pin 2 (INPUT_PULLUP)</code> with <code>DEBOUNCE_MS = 80 ms</code>. A <strong>short press (&lt; 1,200 ms)</strong> toggles local Mute while preserving state, whereas a <strong>long press (≥ 1,200 ms)</strong> triggers <code>resetAll()</code>.</li>
+                <li><strong>Active-LOW Siren &amp; 16×2 I2C LCD:</strong> Controls 1-channel 5 V relay (<code>Pin 4: LOW=ON, HIGH=OFF</code>) switching a 12 V siren and renders real-time node diagnostics on a 16×2 I2C LCD (<code>0x27</code>).</li>
+                <li><strong>6-Node Classroom IoT Ecosystem:</strong> Integrated as Node 2 inside a 3D-printed <code>ALERT! CE04</code> SolidWorks enclosure alongside Sensor Node (1), Gateway (3), MQTT + Node-RED (4), Google Apps Script DB (5), and Looker Studio Dashboard (6).</li>
+              </ul>
+            </div>
+
+            <!-- Interactive Alarm Node Simulator -->
+            <div class="subcard">
+              <h4>
+                <span>Interactive Alarm Node Firmware Bench</span>
+                <span class="badge badge-emerald">Try Button &amp; RF Packets</span>
+              </h4>
+
+              <div class="enclosure-sim">
+                <div class="enclosure-brand">
+                  <span>ALERT! CE04</span>
+                  <span class="badge" style="background: rgba(0,0,0,0.45); color: #fecaca; border-color: rgba(255,255,255,0.22);">
+                    CH 66 · "CE05"
+                  </span>
+                </div>
+
+                <div class="lcd-bezel">
+                  <div class="lcd-screen" aria-live="polite">
+                    <div class="lcd-row" id="lcdRow0">Alarm Ready     </div>
+                    <div class="lcd-row" id="lcdRow1">                </div>
+                  </div>
+                </div>
+
+                <div class="alarm-hw-row">
+                  <button
+                    class="tactile-btn"
+                    id="alarmHwBtn"
+                    type="button"
+                    title="Click briefly (<1.2s) to toggle MUTE, or press & hold >=1.2s to RESET ALL"
+                  >
+                    HOLD / PRESS BUTTON (PIN 2)
+                  </button>
+                  <div class="relay-led">
+                    <span class="led-bulb" id="relayLedBulb"></span>
+                    <span id="relayStatusTxt">RELAY OFF (HIGH) · SIREN IDLE</span>
+                  </div>
+                </div>
+              </div>
+
+              <div style="margin-top: 0.9rem;">
+                <div style="font-size: 0.8rem; color: var(--text-muted); margin-bottom: 0.4rem;">
+                  Send simulated NRF24L01 packet (or hold green button ≥ 1.2 s to Reset):
+                </div>
+                <div class="preset-row" id="alarmPacketBtns"></div>
+              </div>
+
+              <div class="terminal-box" id="alarmSerialLog" style="margin-top: 0.75rem; min-height: 78px;"></div>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ==================== TECHNICAL SKILLS MATRIX ==================== -->
+    <section class="section" id="skills">
+      <div class="container">
+        <div class="section-header">
+          <div>
+            <div class="eyebrow">Capabilities Matrix</div>
+            <h2 class="section-title">Hardware-to-Cloud Technical Stack</h2>
+            <p class="section-sub">
+              Tools, microcontrollers, instrumentation, protocols, and security stacks verified across competition builds and university lab work.
+            </p>
+          </div>
+        </div>
+
+        <div class="skills-grid" id="skillsGrid"></div>
+      </div>
+    </section>
+
+    <!-- ==================== CORE ENGINEERING LABS ARCHIVE ==================== -->
+    <section class="section" id="labs">
+      <div class="container">
+        <div class="section-header">
+          <div>
+            <div class="eyebrow">Verified Coursework · 37+ Lab Reports</div>
+            <h2 class="section-title">Core Engineering Laboratories</h2>
+            <p class="section-sub">
+              Hands-on hardware, FPGA, oscilloscope signal capture, enterprise Huawei routing/switching, and Linux/Docker defense labs at KMITL Chumphon.
+            </p>
+          </div>
+        </div>
+
+        <div class="filter-row" id="labFilters">
+          <button class="tab-btn active" type="button" data-domain="all">All Domains (8)</button>
+          <button class="tab-btn" type="button" data-domain="digital">Digital Systems &amp; FPGA</button>
+          <button class="tab-btn" type="button" data-domain="datacomm">Data Comm &amp; Signals</button>
+          <button class="tab-btn" type="button" data-domain="networks">Computer Networks</button>
+          <button class="tab-btn" type="button" data-domain="security">Security &amp; Linux</button>
+        </div>
+
+        <div class="labs-grid" id="labsGrid"></div>
+      </div>
+    </section>
+
+    <!-- ==================== EDUCATION & CONTACT ==================== -->
+    <section class="section" id="contact">
+      <div class="container">
+        <div class="contact-panel">
+          <div>
+            <div class="eyebrow">Education &amp; Internship Availability</div>
+            <h2 class="section-title" style="font-size: clamp(1.5rem, 2.6vw, 2rem);">
+              Ready to Contribute to Embedded Hardware &amp; Firmware Teams
+            </h2>
+            <p class="section-sub" style="margin-top: 0.65rem;">
+              <strong>King Mongkut's Institute of Technology Ladkrabang (KMITL)</strong> — Prince of Chumphon Campus<br />
+              B.Eng. in Computer Engineering (Year 3) · Cumulative GPA: <strong>≥ 3.20 / 4.00</strong> · Expected Graduation: <strong>2028</strong><br />
+              Extracurricular: University Badminton Player / Club Member
+            </p>
+          </div>
+
+          <div class="subcard" style="display: grid; gap: 0.75rem;">
+            <div>
+              <small class="mono" style="color: var(--text-dim);">DIRECT EMAIL</small>
+              <div style="display: flex; flex-wrap: wrap; gap: 0.5rem; align-items: center; margin-top: 0.2rem;">
+                <a class="mono" href="mailto:tudtudtudut05@gmail.com" style="color: var(--cyan); font-weight: 600;">
+                  tudtudtudut05@gmail.com
+                </a>
+                <button class="btn btn-secondary btn-sm" id="copyEmailBtn" type="button">Copy</button>
+              </div>
+            </div>
+            <div>
+              <small class="mono" style="color: var(--text-dim);">LOCATION</small>
+              <div>KMITL Prince of Chumphon, Chumphon, Thailand</div>
+            </div>
+            <div style="display: flex; flex-wrap: wrap; gap: 0.6rem; margin-top: 0.25rem;">
+              <a class="btn btn-primary btn-sm" href="assets/Resume-Thiraphat-Thongsing.pdf" target="_blank" rel="noopener">
+                Download / View Resume PDF
+              </a>
+              <button
+                class="btn btn-secondary btn-sm"
+                type="button"
+                data-lightbox="assets/score.jpg"
+                data-caption="TESA Top Gun Rally 2026 Official Scorebook — Team TGR-51"
+              >
+                View Score Photo
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="container footer">
+    <span>© 2026 Thiraphat Thongsing · Embedded Systems &amp; IoT Engineering Portfolio</span>
+    <span class="mono">Built from verified lab reports, firmware source, schematics &amp; TGR-51 scorebook</span>
+  </footer>
+
+  <!-- Full-Resolution Image / Schematic Lightbox Modal -->
+  <div class="lightbox" id="lightboxModal" role="dialog" aria-modal="true" aria-labelledby="lightboxCaption">
+    <div class="lightbox-bar">
+      <div id="lightboxCaption" class="mono" style="font-size: 0.84rem; color: var(--text);"></div>
+      <button class="btn btn-secondary btn-sm" id="lightboxCloseBtn" type="button">Close (Esc)</button>
+    </div>
+    <div class="lightbox-stage">
+      <img id="lightboxImg" src="" alt="" />
+    </div>
+  </div>
+
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,251 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1220 780" width="1220" height="780" font-family="Segoe UI, Arial, sans-serif">
+  <defs>
+    <style>
+      .bg { fill: #ffffff; }
+      .border { fill: none; stroke: #1e293b; stroke-width: 2; }
+      .wire { fill: none; stroke: #0f172a; stroke-width: 2.2; stroke-linecap: round; stroke-linejoin: round; }
+      .wire-vcc { fill: none; stroke: #dc2626; stroke-width: 2.4; stroke-linecap: round; stroke-linejoin: round; }
+      .wire-gnd { fill: none; stroke: #0f172a; stroke-width: 2.4; stroke-linecap: round; stroke-linejoin: round; }
+      .wire-sig { fill: none; stroke: #2563eb; stroke-width: 2.2; stroke-linecap: round; stroke-linejoin: round; }
+      .wire-vref { fill: none; stroke: #7c3aed; stroke-width: 2.2; stroke-linecap: round; stroke-linejoin: round; }
+      .wire-btn { fill: none; stroke: #059669; stroke-width: 2.2; stroke-linecap: round; stroke-linejoin: round; }
+      .comp { fill: #ffffff; stroke: #0f172a; stroke-width: 2.2; stroke-linecap: round; stroke-linejoin: round; }
+      .ic-body { fill: #f8fafc; stroke: #0f172a; stroke-width: 2.4; stroke-linejoin: round; }
+      .cx-zone { fill: #fffbeb; stroke: #d97706; stroke-width: 2; stroke-dasharray: 7 5; rx: 8; }
+      .btn-zone { fill: #ecfdf5; stroke: #059669; stroke-width: 1.8; stroke-dasharray: 7 5; rx: 8; }
+      .box { fill: #f8fafc; stroke: #64748b; stroke-width: 1.5; rx: 6; }
+      .port { fill: #eff6ff; stroke: #2563eb; stroke-width: 1.8; rx: 4; }
+      .port-btn { fill: #ecfdf5; stroke: #059669; stroke-width: 1.8; rx: 4; }
+      .tp { fill: #ffffff; stroke: #0f172a; stroke-width: 2; }
+      .junc { fill: #0f172a; }
+      .junc-vcc { fill: #dc2626; }
+      .junc-sig { fill: #2563eb; }
+      .junc-vref { fill: #7c3aed; }
+      .junc-btn { fill: #059669; }
+      .lbl { font-size: 13px; fill: #0f172a; font-weight: 600; }
+      .lbl-sm { font-size: 11px; fill: #475569; }
+      .lbl-pin { font-size: 11px; fill: #334155; font-weight: 700; }
+      .lbl-net { font-size: 12px; font-weight: 700; }
+      .lbl-vcc { font-size: 13px; fill: #dc2626; font-weight: 700; }
+      .lbl-cx { font-size: 12px; fill: #b45309; font-weight: 700; }
+      .lbl-btn { font-size: 12px; fill: #047857; font-weight: 700; }
+      .title { font-size: 16px; fill: #0f172a; font-weight: 700; }
+      .subtitle { font-size: 12px; fill: #475569; }
+    </style>
+  </defs>
+
+  <!-- Sheet Background & Frame -->
+  <rect class="bg" x="0" y="0" width="1220" height="780"/>
+  <rect class="border" x="16" y="16" width="1188" height="748"/>
+
+  <!-- Header Banner -->
+  <text class="title" x="36" y="46">LM393 Voltage Comparator &amp; Push Button Trigger Schematic (Single 10k Resistor)</text>
+  <text class="subtitle" x="36" y="65">Synced with esp32_lm393_cap_meter.ino — 10k used as LM393 OUT1 Pull-up; GPIO 23 uses ESP32 internal INPUT_PULLUP</text>
+
+  <!-- ==================== POWER & GROUND RAILS ==================== -->
+  <!-- +3.3V Rail (y = 100) -->
+  <line class="wire-vcc" x1="120" y1="100" x2="1120" y2="100"/>
+  <circle class="junc-vcc" cx="120" cy="100" r="4"/>
+  <text class="lbl-vcc" x="62" y="104">+3.3V</text>
+
+  <!-- GND Rail (y = 605) -->
+  <line class="wire-gnd" x1="120" y1="605" x2="1120" y2="605"/>
+  <circle class="junc" cx="120" cy="605" r="4"/>
+  <text class="lbl" x="68" y="609">GND</text>
+  <!-- Ground Symbol at x=1120 -->
+  <line class="wire-gnd" x1="1120" y1="605" x2="1120" y2="620"/>
+  <line class="wire-gnd" x1="1106" y1="620" x2="1134" y2="620"/>
+  <line class="wire-gnd" x1="1111" y1="626" x2="1129" y2="626"/>
+  <line class="wire-gnd" x1="1116" y1="632" x2="1124" y2="632"/>
+
+  <!-- ==================== ESP32 CHARGE INPUT & R1 (1M) ==================== -->
+  <!-- ESP32 GPIO 18 Port -->
+  <rect class="port" x="36" y="182" width="146" height="36"/>
+  <text class="lbl" x="46" y="200">ESP32 GPIO 18</text>
+  <text class="lbl-sm" x="46" y="213">PIN_CHARGE (OUT)</text>
+
+  <!-- Wire from GPIO 18 to R1 -->
+  <line class="wire-sig" x1="182" y1="200" x2="225" y2="200"/>
+
+  <!-- R1: 1 MOhm Horizontal Resistor (x = 225..305, y = 200) -->
+  <polyline class="comp" points="225,200 232,190 244,210 256,190 268,210 280,190 292,210 299,200"/>
+  <line class="wire-sig" x1="299" y1="200" x2="305" y2="200"/>
+  <text class="lbl" x="242" y="176">R1 = 1 MΩ</text>
+  <text class="lbl-sm" x="236" y="228">(Charge Resistor)</text>
+
+  <!-- Wire from R1 to Vc Node (x=385, y=200) -->
+  <line class="wire-sig" x1="305" y1="200" x2="480" y2="200"/>
+  <circle class="junc-sig" cx="385" cy="200" r="4.5"/>
+  <text class="lbl-net" fill="#2563eb" x="395" y="191">Vc (RC Node)</text>
+
+  <!-- Route Vc down and right to LM393 IN1- (Pin 2 at x=550, y=270) -->
+  <polyline class="wire-sig" points="480,200 480,270 550,270"/>
+
+  <!-- ==================== Cx TEST SLOT / SOCKET (J1) ==================== -->
+  <rect class="cx-zone" x="315" y="290" width="142" height="205"/>
+  <text class="lbl-cx" x="329" y="310">Cx TEST SLOT (J1)</text>
+  <text class="lbl-sm" x="329" y="325">เว้นช่องสำหรับเสียบ/ตรวจ C</text>
+
+  <!-- Wire down from Vc junction (x=385, y=200) to J1.1 (y=348) -->
+  <line class="wire-sig" x1="385" y1="200" x2="385" y2="348"/>
+  <circle class="tp" cx="385" cy="348" r="5"/>
+  <text class="lbl-pin" x="397" y="352">J1.1 (+)</text>
+
+  <!-- Dashed Probe / Capacitor Symbol inside socket -->
+  <line class="wire" stroke-dasharray="4 3" x1="385" y1="353" x2="385" y2="392"/>
+  <line class="wire" x1="363" y1="392" x2="407" y2="392"/>
+  <line class="wire" x1="363" y1="406" x2="407" y2="406"/>
+  <line class="wire" stroke-dasharray="4 3" x1="385" y1="406" x2="385" y2="448"/>
+  <text class="lbl-cx" x="413" y="403">Cx</text>
+  <text class="lbl-sm" x="413" y="417">(DUT)</text>
+
+  <!-- J1.2 to GND -->
+  <circle class="tp" cx="385" cy="448" r="5"/>
+  <text class="lbl-pin" x="397" y="452">J1.2 (-)</text>
+  <line class="wire-gnd" x1="385" y1="453" x2="385" y2="605"/>
+  <circle class="junc" cx="385" cy="605" r="4"/>
+
+  <!-- ==================== 10k TRIMPOT (RV1) FOR Vref ==================== -->
+  <!-- +3.3V drop to RV1 Pin 1 (x=180, y=315) -->
+  <line class="wire-vcc" x1="180" y1="100" x2="180" y2="315"/>
+  <circle class="junc-vcc" cx="180" cy="100" r="4"/>
+  <text class="lbl-pin" x="145" y="317">Pin 1</text>
+
+  <!-- RV1 Vertical Resistor Body (x=180, y=315..440) -->
+  <line class="wire" x1="180" y1="315" x2="180" y2="328"/>
+  <polyline class="comp" points="180,328 170,336 190,348 170,360 190,372 170,384 190,396 170,408 190,420 180,427"/>
+  <line class="wire" x1="180" y1="427" x2="180" y2="440"/>
+
+  <!-- RV1 Pin 3 to GND -->
+  <text class="lbl-pin" x="145" y="445">Pin 3</text>
+  <line class="wire-gnd" x1="180" y1="440" x2="180" y2="605"/>
+  <circle class="junc" cx="180" cy="605" r="4"/>
+
+  <!-- RV1 Labels -->
+  <text class="lbl" x="68" y="368">RV1 = 10 kΩ</text>
+  <text class="lbl-sm" x="68" y="384">Trimpot (Vref)</text>
+  <text class="lbl-sm" x="68" y="400">Tune ≈ 1.65 V</text>
+
+  <!-- RV1 Wiper (Pin 2) Arrow & Vref Net -->
+  <line class="wire-vref" x1="220" y1="378" x2="193" y2="378"/>
+  <polygon fill="#7c3aed" points="191,378 201,373 201,383"/>
+  <text class="lbl-pin" x="200" y="368">Pin 2 (Wiper)</text>
+
+  <!-- Route Vref cleanly under J1 (y=545) up to LM393 IN1+ (Pin 3 at x=550, y=350) -->
+  <polyline class="wire-vref" points="220,378 260,378 260,545 480,545 480,350 550,350"/>
+  <text class="lbl-net" fill="#7c3aed" x="270" y="537">Vref (≈ 1.65 V)</text>
+
+  <!-- Optional Test Point TP_VREF for test_trimpot10k.ino (GPIO 34) -->
+  <circle class="junc-vref" cx="260" cy="545" r="4"/>
+  <line class="wire-vref" x1="260" y1="545" x2="260" y2="572"/>
+  <circle class="tp" cx="260" cy="572" r="4.5"/>
+  <text class="lbl-sm" x="140" y="577">TP_VREF (to GPIO 34 test)</text>
+
+  <!-- ==================== U1A: LM393 VOLTAGE COMPARATOR ==================== -->
+  <!-- Triangle Body (x=550..690, y=225..395, apex=690,310) -->
+  <polygon class="ic-body" points="550,225 550,395 690,310"/>
+
+  <!-- Comparator Inputs (- on top = Pin 2, + on bottom = Pin 3) -->
+  <text class="lbl" x="562" y="275">−</text>
+  <text class="lbl-pin" x="515" y="264">Pin 2</text>
+  <text class="lbl-sm" x="578" y="275">IN1-</text>
+
+  <text class="lbl" x="562" y="355">+</text>
+  <text class="lbl-pin" x="515" y="344">Pin 3</text>
+  <text class="lbl-sm" x="578" y="355">IN1+</text>
+
+  <!-- IC Designator -->
+  <text class="lbl" x="588" y="310">U1A</text>
+  <text class="lbl-sm" x="583" y="325">LM393</text>
+
+  <!-- Power Pins: Pin 8 (VCC) & Pin 4 (GND) -->
+  <line class="wire-vcc" x1="612" y1="100" x2="612" y2="262"/>
+  <circle class="junc-vcc" cx="612" cy="100" r="4"/>
+  <text class="lbl-pin" x="619" y="246">Pin 8 (VCC)</text>
+
+  <line class="wire-gnd" x1="612" y1="358" x2="612" y2="605"/>
+  <circle class="junc" cx="612" cy="605" r="4"/>
+  <text class="lbl-pin" x="619" y="382">Pin 4 (GND)</text>
+
+  <!-- Output Pin 1 (OUT1) -->
+  <line class="wire-sig" x1="690" y1="310" x2="795" y2="310"/>
+  <text class="lbl-pin" x="696" y="302">Pin 1</text>
+  <circle class="junc-sig" cx="745" cy="310" r="4.5"/>
+
+  <!-- ==================== R2: ONLY 10k RESISTOR (OUT1 PULL-UP) ==================== -->
+  <circle class="junc-vcc" cx="745" cy="100" r="4"/>
+  <line class="wire-vcc" x1="745" y1="100" x2="745" y2="160"/>
+  <polyline class="comp" points="745,160 735,167 755,179 735,191 755,203 735,215 755,227 745,234"/>
+  <line class="wire-sig" x1="745" y1="234" x2="745" y2="310"/>
+  <text class="lbl" x="762" y="192">R2 = 10 kΩ</text>
+  <text class="lbl-sm" x="762" y="208">(OUT1 Pull-up)</text>
+  <text class="lbl-sm" x="762" y="223">Open-Collector</text>
+
+  <!-- ESP32 GPIO 19 Output Port -->
+  <rect class="port" x="795" y="292" width="148" height="36"/>
+  <text class="lbl" x="805" y="310">ESP32 GPIO 19</text>
+  <text class="lbl-sm" x="805" y="323">PIN_COMP_OUT (IN)</text>
+
+  <!-- ==================== UNUSED CHANNEL U1B NOTE ==================== -->
+  <rect class="box" x="688" y="425" width="252" height="120"/>
+  <text class="lbl" x="702" y="447">U1B (LM393 Ch.2 — Unused)</text>
+  <text class="lbl-sm" x="702" y="466">Recommended termination to avoid noise:</text>
+  <text class="lbl-sm" x="702" y="486">• Pin 5 (IN2+)  →  +3.3V</text>
+  <text class="lbl-sm" x="702" y="504">• Pin 6 (IN2-)  →  GND</text>
+  <text class="lbl-sm" x="702" y="522">• Pin 7 (OUT2)  →  NC (Leave Open)</text>
+
+  <!-- ==================== PUSH BUTTON TRIGGER (GPIO 23 INTERNAL PULLUP) ==================== -->
+  <rect class="btn-zone" x="962" y="338" width="224" height="190"/>
+  <text class="lbl-btn" x="976" y="358">TRIGGER &amp; HW DEBOUNCE</text>
+
+  <!-- ESP32 GPIO 23 Port (Internal INPUT_PULLUP ~45 kOhm) -->
+  <rect class="port-btn" x="980" y="205" width="186" height="52"/>
+  <text class="lbl" x="992" y="224">ESP32 GPIO 23</text>
+  <text class="lbl-sm" x="992" y="239">PIN_BUTTON (INPUT_PULLUP)</text>
+  <text class="lbl-sm" x="992" y="252">Internal Pull-up (~45 kΩ)</text>
+
+  <!-- Wire down from GPIO 23 to split node (1040, 375) -->
+  <line class="wire-btn" x1="1040" y1="257" x2="1040" y2="375"/>
+
+  <!-- Split at (1040, 375) to SW1 (x=1002) and C1 (x=1092) -->
+  <circle class="junc-btn" cx="1040" cy="375" r="4"/>
+  <line class="wire-btn" x1="1002" y1="375" x2="1092" y2="375"/>
+
+  <!-- SW1: Momentary Push Button (NO) at x=1002, y=375..475 -->
+  <line class="wire-btn" x1="1002" y1="375" x2="1002" y2="410"/>
+  <circle class="tp" cx="1002" cy="410" r="3.5"/>
+  <circle class="tp" cx="1002" cy="452" r="3.5"/>
+  <!-- Tactile switch bridge & plunger -->
+  <line class="wire" x1="986" y1="406" x2="986" y2="456"/>
+  <line class="wire" x1="974" y1="431" x2="986" y2="431"/>
+  <line class="wire-gnd" x1="1002" y1="455" x2="1002" y2="605"/>
+  <circle class="junc" cx="1002" cy="605" r="4"/>
+  <text class="lbl" x="974" y="486">SW1</text>
+  <text class="lbl-sm" x="974" y="501">Push Btn</text>
+  <text class="lbl-sm" x="974" y="515">(Active LOW)</text>
+
+  <!-- C1: 0.1 uF Hardware Debounce Cap at x=1092, y=375..605 -->
+  <line class="wire-btn" x1="1092" y1="375" x2="1092" y2="424"/>
+  <line class="wire" x1="1074" y1="424" x2="1110" y2="424"/>
+  <line class="wire" x1="1074" y1="438" x2="1110" y2="438"/>
+  <line class="wire-gnd" x1="1092" y1="438" x2="1092" y2="605"/>
+  <circle class="junc" cx="1092" cy="605" r="4"/>
+  <text class="lbl" x="1116" y="427">C1 = 0.1 µF</text>
+  <text class="lbl-sm" x="1116" y="443">HW Debounce</text>
+  <text class="lbl-sm" x="1116" y="457">(Optional)</text>
+
+  <!-- ==================== BOM & TITLE BLOCK ==================== -->
+  <rect class="box" x="36" y="642" width="714" height="104"/>
+  <text class="lbl" x="50" y="663">Bill of Materials (BOM — 1× 10k Resistor Only):</text>
+  <text class="lbl-sm" x="50" y="682">• U1: LM393 Dual Comparator (DIP-8)   • RV1: 10 kΩ Trimpot (Vref ≈ 1.65 V)   • R1: 1 MΩ (RC Charge from GPIO 18)</text>
+  <text class="lbl-sm" x="50" y="700">• R2: 10 kΩ (ONLY 10k R — OUT1 Pull-up to +3.3V)   • J1: 2-Pin Socket reserved for Cx testing (between Vc &amp; GND)</text>
+  <text class="lbl-sm" x="50" y="718">• SW1: Push Button to GND + C1 (0.1 µF Debounce) → GPIO 23 (uses ESP32 internal INPUT_PULLUP, no 2nd 10k needed)</text>
+  <text class="lbl-sm" x="50" y="736">• Onboard LED: GPIO 2 (built-in ESP32 DevKit V1, 200 ms pulse on measurement) — no external LED needed</text>
+
+  <rect class="box" x="764" y="642" width="422" height="104"/>
+  <text class="lbl" x="780" y="665">TGR 2026 Track 1 — Complete Front-End</text>
+  <text class="lbl-sm" x="780" y="685">Synced Firmware: esp32_lm393_cap_meter.ino</text>
+  <text class="lbl-sm" x="780" y="703">  PIN_CHARGE=18, PIN_COMP_OUT=19, PIN_BUTTON=23, PIN_LED=2</text>
+  <text class="lbl-sm" x="780" y="721">Trimpot Test: test_trimpot10k.ino (TP_VREF → GPIO 34 while tuning)</text>
+  <text class="lbl-sm" x="780" y="737">Supply: 3.3 V (ESP32 DevKit V1) | Sheet 1 of 1</text>
+</svg>
